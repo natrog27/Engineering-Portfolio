@@ -834,6 +834,14 @@ h1.disclaimer-text {
 
 .project-hero-img {
   position: relative;
+  overflow: hidden;
+}
+
+.project-hero-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
 }
 
 .project-dot--large {
