@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ComfyCane — Nathaniel Rogers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ── Navigation ─────────────────────────────────────────── -->
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="/images/logo_small.png" 
+          alt="Logo"
+          height="60"
+          width="60"
+        />
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="medical-devices.html" class="active">Medical Devices</a></li>
+        <li><a href="about.html">About Me</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── Back Arrow ─────────────────────────────────────────── -->
+  <div style="background-color: var(--teal);">
+    <a href="medical-devices.html" class="back-arrow" style="margin-bottom: 1rem;display:inline-flex;align-items:center;gap:6px;font-size:0.9rem;color:var(--black);">
+      &#8826; Back
+    </a>
+  </div>
+
+  <!-- ── Project Hero ───────────────────────────────────────── -->
+  <section style="background: var(--teal);">
+    <div class="project-hero-grid">
+
+      <!-- Left: body region illustration -->
+      <div class="project-hero-img">
+        <!-- REPLACE: cropped Vesalius torso/abdomen figure with red dot overlay -->
+        <img src="images/comfycane/comfycane_silhouette.png" alt="ComfyCane Silhouette" />
+        <span class="project-dot project-dot--large" style="top: 40%; left: 65%;"></span>
+      </div>
+
+      <!-- Right: title block -->
+      <div class="project-hero-text">
+        <div>
+          <h1 class="project-title" style="font-size: clamp(2rem, 6vw, 5rem);">ComfyCane*</h1>
+        </div>
+        <p class="project-subtitle">
+          *Optimizing a patient’s mobility aid for age-related changes.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Skill Tags Bar ─────────────────────────────────────── -->
+  <div class="skill-bar fade-in">
+    <div class="skill-bar-inner">
+      <span class="skill-bar-label">Key Skills:</span>
+      <span class="skill-tag skill-tag--black">Machining</span>
+      <span class="skill-tag skill-tag--black">Design Thinking</span>
+      <span class="skill-tag skill-tag--black">Human Factors</span>
+      <span class="skill-tag skill-tag--grey">Prototype Fabrication</span>
+    </div>
+  </div>
+
+  <!-- ── Story Container: Left vertical rail + content wrapper ── -->
+  <div class="story-container">
+    <nav class="vertical-rail" aria-label="Section navigation">
+      <a href="#" class="rail-link" data-target="challenge">The Challenge</a>
+      <a href="#" class="rail-link" data-target="product">The Product</a>
+      <a href="#" class="rail-link" data-target="role">My Role</a>
+    </nav>
+
+    <div class="story-content-wrapper">
+
+  <!-- ════════════════════════════════════════════════════════
+    SECTION 1: The Problem
+    ════════════════════════════════════════════════════════ -->
+  <section id="challenge" class="section story-section">
+    <span>
+      <!-- STICKY VERTICAL NAV BAR -->
+    </span>
+    <span><div class="section-inner">
+      <div class="two-col">
+
+        <!-- Left: text -->
+        <div>
+          <div class="section-marker">
+            <span class="asterisk">*</span>
+            <h2 class="section-heading">Fostering Independence in Old Age</h2>
+          </div>
+
+          <div class="prose">
+            <p>
+              My team's client for this project, Ms. Lafond, depended on her 
+              rolling quad cane to remain mobile and active in her day-to-day life. 
+              She used it to attend her grandchildren's sporting events, go grocery
+              shopping, and more. 
+            </p>
+            <p>
+              However, her existing cane failed to account for and adjust to Ms. Lafond’s 
+              decrease in height over the period of two years since it was custom-built
+              by an orthoticist at Shirley Ryan AbilityLab.
+            </p>
+            <p>
+              My team’s goal was to provide Ms. Lafond with a new, durable prototype that 
+              improved her balance while increasing comfort when walking in indoor and 
+              outdoor environments. 
+            </p>
+          </div>
+        </div>
+
+        <!-- Right: images -->
+        <div style="display:flex; flex-direction:column; gap:1.5rem;">
+          <div class="project-image">
+            <!-- REPLACE: photo of 3 mL ENFit syringe with worn markings -->
+            <img src="images/comfycane/comfycane_original_rolling_quad_cane.png" style ="width:clamp(200px, 70%, 400px);" alt="3 mL ENFit syringe with worn markings">
+            <p class="caption">Ms. Lafond with existing rolling quad cane</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    </span>
+  </section>
+
+    <!-- ════════════════════════════════════════════════════════
+      SECTION 2: The Solution
+      ════════════════════════════════════════════════════════ -->
+    <section id="product" class="section grey story-section">
+    <div class="section-inner">
+      <div class="two-col">
+        <!-- Left: text -->
+        <div>
+          <div class="section-marker">
+            <span class="asterisk">*</span>
+            <h2 class="section-heading">The New Quad Cane: ComfyCane</h2>
+          </div>
+
+          <div class="prose">
+            <p>
+              In response to these issues, my team developed the ComfyCane: 
+              an adjustable, lightweight cane with two front wheels and back 
+              stoppers, a hand grip, and an arm resting platform. 
+            </p>
+            <p>
+              The base of the cane is composed of a lightweight frame with four 
+              individual legs. The front legs each have a wheel secured with a 
+              nut and bolt, and the back legs have rubber stoppers attached.
+            </p>
+            <p>
+              Because Ms. Lafond tended to use her old quad cane as a hook 
+              for carrying her purse, the ComfyCane also has a dedicated 
+              hook on its shaft for the same purpose.
+            </p>
+            <p>
+              A complete design report for the ComfyCane
+              can be found <a class="about-link" href="supporting_docs/Report_ComfyCane.pdf" target="_blank" style="text-decoration: underline;">here</a> .
+            </p>
+          </div>
+        </div>
+
+        <!-- Right: images -->
+        <div style="display:flex; flex-direction:column; gap:1.5rem;">
+          <div class="project-image">
+            <!-- REPLACE: photo of 3 mL ENFit syringe with worn markings -->
+            <img src="images/comfycane/comfycane_prototype_hero.png" style ="width:clamp(200px, 70%, 400px);" alt="3 mL ENFit syringe with worn markings">
+            <p class="caption">The ComfyCane</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    </section>
+    <section class="section white fade-in">
+      <!-- Features grid -->
+      <div class="heading-block">
+        <h2 class="section-heading">Components & Benefits</h2>
+      </div>
+
+      <div class="three-col">
+        <div class="feature-card">
+          <h4 style="text-decoration: underline 2px var(--teal); text-underline-offset: 8px; align-self: center;">Arm Platform</h4>
+          <p style="padding-top: 1rem;">
+            Ms. Lafond’s left arm rests on the arm platform, which 
+            can be loosened and adjusted to a position she feels 
+            most comfortable with.
+          </p>
+          <img src="images/comfycane/comfycane_arm_platform.png">
+        </div>
+        <div class="feature-card">
+          <h4 style="text-decoration: underline 2px var(--teal); text-underline-offset: 8px; align-self: center;">Adjustable Shaft</h4>
+          <p style="padding-top: 1rem;">
+            The shaft can be adjusted vertically through a hole and peg system, 
+            meaning Ms. Lafond's cane will fit her even if her stature continues to change.
+          </p>
+          <img src="images/comfycane/comfycane_adjustable_shaft.png">
+        </div>
+        <div class="feature-card">
+          <h4 style="text-decoration: underline 2px var(--teal); text-underline-offset: 8px; align-self: center;">Lightweight Aluminum Frame</h4>
+          <p style="padding-top: 1rem;">
+            The cane’s lightweight frame reduces the overall weight of the device, 
+            while also providing a stable foundation for the cane.
+          </p>
+            <img src="images/comfycane/comfycane_aluminum_base.png">
+
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════
+      SECTION 3: My Contributions
+      ════════════════════════════════════════════════════════ -->
+    <section id="role" class="section grey story-section">
+    <div class="section-inner">
+
+      <div class="heading-block">
+        <h2 class="section-heading">My Contributions</h2>
+      </div>
+
+      <!-- Contribution 1 -->
+      <div class="contribution">
+        <div class="contribution-text">
+          <h3>Design Sketches</h3>
+          <p>
+            Because the patient lived far from campus, I used sketching
+            as a tool for portraying the final product in a realistic context.
+          </p>
+        </div>
+        <div>
+          <!-- REPLACE: photo or render of ENdose final prototype -->
+          <img src="images/comfycane/comfycane_sketch_in_context.png" style="height:auto; width:auto;" alt="Final ENdose prototype (render)">
+        </div>
+      </div>
+
+      <!-- Contribution 2 (flipped) -->
+      <div class="contribution flip">
+        <div class="contribution-text">
+          <h3>Machining</h3>
+          <p>
+            Our prototype used a custom aluminum bracket to 
+            hold the arm rest onto the shaft, which I used a 
+            horizontal bandsaw and drill press to fabricate.
+          </p>
+        </div>
+        <div>
+          <div class="asterisk" style="width:100%; height:100%; min-height:300px; display:flex; align-items:center; justify-content:center; font-size:clamp(100px, 20vw, 200px); color:var(--teal);">
+            *
+          </div>        </div>
+      </div>
+
+      <!-- Contribution 3 -->
+      <div class="contribution">
+        <div class="contribution-text">
+          <h3>User Research</h3>
+          <p>
+            I traveled to and from the clinic at which Ms. Lafond
+            receives treatment to learn about her needs, take measurements
+            of her previous mobility aid, and build the ComfyCane to
+            match her changing physique.
+          </p>
+        </div>
+        <div>
+          <!-- large teal asterisk for this image instead of a true image -->
+          <div class="asterisk" style="width:100%; height:100%; min-height:300px; display:flex; align-items:center; justify-content:center; font-size:clamp(100px, 20vw, 200px); color:var(--teal);">
+            *
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- ── Footer ─────────────────────────────────────────────── -->
+      </div><!-- /.story-content-wrapper -->
+    </div><!-- /.story-container -->
+
+    <!-- ── Footer ─────────────────────────────────────────────── -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-photo">
+        <!-- REPLACE: circular headshot photo -->
+        <img
+          src="/images/nathaniel_rogers_headshot_small.jpg" 
+          alt="Photo"
+          class="square"
+          style="width:44px;height:44px;"
+        />    
+      </div>
+
+      <a href="mailto:nrogers@u.northwestern.edu" class="footer-link">
+        <!-- envelope icon -->
+        <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="4" width="20" height="16" rx="2"/>
+          <polyline points="2,4 12,13 22,4"/>
+        </svg>
+        Email
+      </a>
+
+      <a href="https://www.linkedin.com/in/nathaniel-r0gers/" target="_blank" rel="noopener" class="footer-link">
+        <!-- linkedin icon -->
+        <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+          <rect x="2" y="9" width="4" height="12"/>
+          <circle cx="4" cy="4" r="2"/>
+        </svg>
+        LinkedIn
+      </a>
+
+      <a href="supporting_docs/nathaniel_rogers_resume.pdf" target="_blank" rel="noopener" class="footer-link">
+        <!-- document file icon -->
+        <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <polyline points="14 2 14 8 20 8"/>
+          <line x1="16" y1="13" x2="8" y2="13"/>
+          <line x1="16" y1="17" x2="8" y2="17"/>
+        </svg>
+        Resume
+      </a>
+
+      <!-- copyright notice on far right of footer -->
+      <span class="footer-copyright">
+        &copy; 2026 Nathaniel Rogers
+      </span>
+
+    </div>
+  </footer>
+
+
+  <script src="js/nav.js"></script>
+  <script>
+    (function(){
+      function onReady(fn){
+        if(document.readyState !== 'loading') fn();
+        else document.addEventListener('DOMContentLoaded', fn);
+      }
+
+      onReady(function(){
+        var fadeEls = document.querySelectorAll('.fade-in, .contribution');
+        if(!fadeEls || fadeEls.length === 0) return;
+
+        var io = new IntersectionObserver(function(entries){
+          entries.forEach(function(entry){
+            if(entry.isIntersecting){
+              entry.target.classList.add('visible');
+              io.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12 });
+
+        fadeEls.forEach(function(node){ io.observe(node); });
+      });
+    })();
+  </script>
+</body>
+</html>

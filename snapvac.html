@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SnapVac — Nathaniel Rogers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ── Navigation ─────────────────────────────────────────── -->
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="/images/logo_small.png" 
+          alt="Logo"
+          height="60"
+          width="60"
+        />
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="medical-devices.html" class="active">Medical Devices</a></li>
+        <li><a href="about.html">About Me</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── Back Arrow ─────────────────────────────────────────── -->
+  <div style="background-color: var(--teal);">
+    <a href="medical-devices.html" class="back-arrow" style="margin-bottom: 1rem;display:inline-flex;align-items:center;gap:6px;font-size:0.9rem;color:var(--black);">
+      &#8826; Back
+    </a>
+  </div>
+
+  <!-- ── Project Hero ───────────────────────────────────────── -->
+  <section style="background: var(--teal);">
+    <div class="project-hero-grid">
+
+      <!-- Left: body region illustration -->
+      <div class="project-hero-img">
+        <!-- REPLACE: cropped Vesalius torso/abdomen figure with red dot overlay -->
+        <img src="images/snapvac/snapvac_silhouette.png" alt="SnapVac Silhouette"/>
+        <span class="project-dot project-dot--large" style="top: 25%; left: 60%;"></span>
+
+      </div>
+
+      <!-- Right: title block -->
+      <div class="project-hero-text">
+        <div>
+          <h1 class="project-title">SnapVac*</h1>
+        </div>
+        <p class="project-subtitle">
+          *Improving endotracheal intubation
+           success rates by reducing manpower 
+           need in time-critical scenarios.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Skill Tags Bar ─────────────────────────────────────── -->
+  <div class="skill-bar fade-in">
+    <div class="skill-bar-inner">
+      <span class="skill-bar-label">Key Skills:</span>
+      <span class="skill-tag skill-tag--black">Mechanical Design</span>
+      <span class="skill-tag skill-tag--black">Biocompatibility</span>
+      <span class="skill-tag skill-tag--black">Technical Communication</span>
+      <span class="skill-tag skill-tag--grey">3D Printing</span>
+      <span class="skill-tag skill-tag--grey">Poster Preparation</span>
+    </div>
+  </div>
+
+  <!-- ── Story Container: Left vertical rail + content wrapper ── -->
+  <div class="story-container">
+    <nav class="vertical-rail" aria-label="Section navigation">
+      <a href="#" class="rail-link" data-target="challenge">The Challenge</a>
+      <a href="#" class="rail-link" data-target="product">The Product</a>
+      <a href="#" class="rail-link" data-target="role">My Role</a>
+    </nav>
+
+    <div class="story-content-wrapper">
+
+  <!-- ════════════════════════════════════════════════════════
+    SECTION 1: The Problem
+    ════════════════════════════════════════════════════════ -->
+  <section id="challenge" class="section story-section">
+    <span>
+      <!-- STICKY VERTICAL NAV BAR -->
+    </span>
+    <span><div class="section-inner">
+      <div class="two-col">
+
+        <!-- Left: text -->
+        <div>
+          <div class="section-marker">
+            <span class="asterisk">*</span>
+            <h2 class="section-heading">Lifesaving—but Broken—Technology</h2>
+          </div>
+
+          <div class="prose">
+            <p>
+              One of the top physician priorities upon a patient arriving in the emergency
+              room is to secure their airway. This is often done through <strong>endotracheal 
+              intubation</strong>, a procedure in which a tube is inserted into the patient's 
+              trachea using a tool called a <strong>laryngoscope</strong>.
+            </p>
+            <p>
+              If the laryngoscope is used incorrectly or the intubation fails, the patient
+              may experience negative symptoms upon regaining consciousness, including:
+            </p>
+            <ul>
+              <li>
+                Inflammation
+              </li>
+              <li>
+                Angioedema (local swelling in the throat)
+              </li>
+              <li>
+                Soreness
+              </li>
+            </ul>
+            <p>
+              Modern laryngoscopes use a camera to provide a <strong>video feed</strong> 
+              of the patient's airway, allowing the physician to see directly where to
+              place the tube. However, <strong>fluids</strong> like blood, saliva, and vomit can obscure the camera 
+              lens, making it difficult to see the airway and increasing the risk of intubation failure.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right: images -->
+        <div style="display:flex; flex-direction:column; gap:1.5rem;">
+          <div class="project-image">
+            <img src="images/snapvac/snapvac_annotated_laryngoscope.png" style ="width:clamp(200px, 70%, 400px);" alt="3 mL ENFit syringe with worn markings">
+            <p class="caption">Laryngoscope (* = location of camera for video laryngoscopy)</p>
+          </div>
+          <div class="project-image">
+            <img src="images/snapvac/snapvac_video_laryngoscopy_mannequin.png" style ="width:clamp(200px, 70%, 400px);" alt="Parent-caregiver's disorganized kitchen 'pharmacy' drawer">
+            <p class="caption">Design study practicing video laryngoscopy on a mannequin</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    </span>
+  </section>
+  <section class="section grey fade-in">
+    <div class="section-inner">
+      <div class="section-marker">
+        <span class="asterisk">*</span>
+        <h2 class="section-heading">Saving Critical Seconds</h2>
+      </div>
+        <div class="prose">
+            <p>
+              Discussing this issue with <strong>practicing physicians and anesthesiologists</strong> 
+              revealed the critical features of the solution. The design must:
+            </p>
+            <ol>
+                <li>
+                  Save the time it takes to call in an extra pair of hands to apply suction.
+                </li>
+                <li>
+                   Reduce the average overall attempts necessary to intubate.
+                </li>
+                <li>
+                   Integrate cleanly into existing ER product ecosystems.
+                </li>
+            </ol>
+  </section>
+
+    <!-- ════════════════════════════════════════════════════════
+      SECTION 2: The Solution
+      ════════════════════════════════════════════════════════ -->
+    <section id="product" class="section story-section fade-in">
+    <div class="section-inner">
+
+      <div class="heading-block">
+        <h2 class="section-heading">The SnapVac</h2>
+      </div>
+      <div class="project-image">
+        <img src="images/snapvac/snapvac_main_diagram.png" style="width:100%; height:auto;" alt="SnapVac CAD render">
+      </div>
+      <div class="prose" style="font-style: italic; align-items: center; display: flex; justify-content: center; margin-top: 1rem;">
+        <p>
+            See the full project poster <a style="text-decoration: underline; color: var(--teal);" href="supporting_docs/BMES_Design_Team_SnapVac_Video_Laryngoscopy_Undergrad_Research_Expo.pdf" target="_blank" rel="noopener">here</a>.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════
+      SECTION 3: My Contributions
+      ════════════════════════════════════════════════════════ -->
+    <section id="role" class="section grey story-section">
+    <div class="section-inner">
+
+      <div class="heading-block">
+        <h2 class="section-heading">My Contributions</h2>
+      </div>
+
+      <!-- Contribution 1 -->
+      <div class="contribution">
+        <div class="contribution-text">
+          <h3>Complete Physical Product Design</h3>
+          <p>
+            I translated physician feedback and secondary research into 
+            a <strong>safe, reliable, and disposable</strong> prototype.
+          </p>
+        </div>
+        <div>
+          <!-- REPLACE: photo or render of ENdose final prototype -->
+          <img src="images/snapvac/snapvac_engineering_drawings.png" style="height:100%; width:auto;" alt="Final ENdose prototype (render)">
+        </div>
+      </div>
+
+      <!-- Contribution 2 (flipped) -->
+      <div class="contribution flip">
+        <div class="contribution-text">
+          <h3>CAD &amp; Rendering</h3>
+          <p>
+            To prepare for the <strong>research expo</strong> at which the SnapVac was presented, 
+            I prepared CAD designs and renders representing the SnapVac from 
+            several views that mirror how physicians would use the product.
+          </p>
+        </div>
+        <div>
+          <!-- REPLACE: dark-background CAD render (e.g., green tinted OnShape view) -->
+          <img src="images/snapvac/snapvac_render.png" style="width:100%; height:auto;" alt="Dark-background CAD render (e.g., green tinted OnShape view)">
+        </div>
+      </div>
+
+      <!-- Contribution 3 -->
+      <div class="contribution">
+        <div class="contribution-text">
+          <h3>Prototype Fabrication</h3>
+          <p>
+            I 3D printed several copies of the prototype using PLA, which I 
+            chose for its <strong>biocompatibility, biodegradability, and cost,</strong> 
+            given that the SnapVac is a disposable tool.
+          </p>
+        </div>
+        <div>
+          <!-- REPLACE: screenshot of tolerance analysis table (Excel/Word document) -->
+          <img src="images/snapvac/snapvac_printed_prototype.png" style="width:100%; height:auto;" alt="Screenshot of tolerance analysis table (Excel or Word document)">
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- ── Footer ─────────────────────────────────────────────── -->
+      </div><!-- /.story-content-wrapper -->
+    </div><!-- /.story-container -->
+
+    <!-- ── Footer ─────────────────────────────────────────────── -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-photo">
+        <!-- REPLACE: circular headshot photo -->
+        <img
+          src="/images/nathaniel_rogers_headshot_small.jpg" 
+          alt="Photo"
+          class="square"
+          style="width:44px;height:44px;"
+        />    
+      </div>
+
+      <a href="mailto:nrogers@u.northwestern.edu" class="footer-link">
+        <!-- envelope icon -->
+        <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="4" width="20" height="16" rx="2"/>
+          <polyline points="2,4 12,13 22,4"/>
+        </svg>
+        Email
+      </a>
+
+      <a href="https://www.linkedin.com/in/nathaniel-r0gers/" target="_blank" rel="noopener" class="footer-link">
+        <!-- linkedin icon -->
+        <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+          <rect x="2" y="9" width="4" height="12"/>
+          <circle cx="4" cy="4" r="2"/>
+        </svg>
+        LinkedIn
+      </a>
+
+      <a href="supporting_docs/nathaniel_rogers_resume.pdf" target="_blank" rel="noopener" class="footer-link">
+        <!-- document file icon -->
+        <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <polyline points="14 2 14 8 20 8"/>
+          <line x1="16" y1="13" x2="8" y2="13"/>
+          <line x1="16" y1="17" x2="8" y2="17"/>
+        </svg>
+        Resume
+      </a>
+
+      <!-- copyright notice on far right of footer -->
+      <span class="footer-copyright">
+        &copy; 2026 Nathaniel Rogers
+      </span>
+
+    </div>
+  </footer>
+
+
+  <script src="js/nav.js"></script>
+  <script>
+    (function(){
+      function onReady(fn){
+        if(document.readyState !== 'loading') fn();
+        else document.addEventListener('DOMContentLoaded', fn);
+      }
+
+      onReady(function(){
+        var fadeEls = document.querySelectorAll('.fade-in, .contribution');
+        if(!fadeEls || fadeEls.length === 0) return;
+
+        var io = new IntersectionObserver(function(entries){
+          entries.forEach(function(entry){
+            if(entry.isIntersecting){
+              entry.target.classList.add('visible');
+              io.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12 });
+
+        fadeEls.forEach(function(node){ io.observe(node); });
+      });
+    })();
+  </script>
+</body>
+</html>

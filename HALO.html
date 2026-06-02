@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HALŌ — Nathaniel Rogers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ── Navigation ─────────────────────────────────────────── -->
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="/images/logo_small.png" 
+          alt="Logo"
+          height="60"
+          width="60"
+        />
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="medical-devices.html" class="active">Medical Devices</a></li>
+        <li><a href="about.html">About Me</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── Back Arrow ─────────────────────────────────────────── -->
+  <div style="background-color: var(--teal);">
+    <a href="medical-devices.html" class="back-arrow" style="margin-bottom: 1rem;display:inline-flex;align-items:center;gap:6px;font-size:0.9rem;color:var(--black);">
+      &#8826; Back
+    </a>
+  </div>
+
+  <!-- ── Project Hero ───────────────────────────────────────── -->
+  <section style="background: var(--teal);">
+    <div class="project-hero-grid">
+
+      <!-- Left: body region illustration -->
+      <div class="project-hero-img">
+        <!-- REPLACE: cropped Vesalius torso/abdomen figure with red dot overlay -->
+        <img src="images/halo/halo_silhouette.png" alt="HALŌ Silhouette" />
+        <span class="project-dot project-dot--large" style="top: 55%; left: 77%;"></span>
+      </div>
+
+      <!-- Right: title block -->
+      <div class="project-hero-text">
+        <div>
+          <h1 class="project-title">HALŌ</h1>
+        </div>
+        <p class="project-subtitle">
+          *Bringing subcutaneous large-volume drug delivery out of the clinic and into a wearable.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Skill Tags Bar ─────────────────────────────────────── -->
+  <div class="skill-bar fade-in">
+    <div class="skill-bar-inner">
+      <span class="skill-bar-label">Key Skills:</span>
+      <span class="skill-tag skill-tag--black">Design Research</span>
+      <span class="skill-tag skill-tag--black">Human Factors</span>
+      <span class="skill-tag skill-tag--black">Need Finding</span>
+      <span class="skill-tag skill-tag--grey">Design Thinking</span>
+    </div>
+  </div>
+
+  <!-- ── Story Container: Left vertical rail + content wrapper ── -->
+  <div class="story-container">
+    <nav class="vertical-rail" aria-label="Section navigation">
+      <a href="#" class="rail-link" data-target="challenge">The Challenge</a>
+      <a href="#" class="rail-link" data-target="product">The Product</a>
+      <a href="#" class="rail-link" data-target="role">My Role</a>
+    </nav>
+
+    <div class="story-content-wrapper">
+
+    <!-- ════════════════════════════════════════════════════════
+    SECTION 1: The Problem
+    ════════════════════════════════════════════════════════ -->
+    <section id="challenge" class="section story-section">
+
+    <span><div class="section-inner">
+        <!-- Sub-section: What it Meant... (grey background, separate fade-in) -->
+          <div class="section-marker">
+            <span class="asterisk">*</span>
+            <h2 class="section-heading">Living with Regular Infusions</h2>
+          </div>
+
+          <div class="prose">
+            <p>
+              Around the world, hundreds of millions of people are living with chronic 
+              diseases that require regular <strong>intravenous (IV)</strong> or <strong>subcutaneous infusions</strong>. 
+              Even ignoring complications of these drugs, the infusion process is burdensome 
+              to patients;
+            </p>
+            <ul>
+              <li>Depending on healthcare professionals to administer the treatment makes the patient’s health less private,</li>
+              <li>Commuting to a clinic can be extremely challenging, especially for patients who live in healthcare deserts, and</li>
+              <li>Regular infusions require patients to miss work, family events, or other important commitments for the sake of their health.</li>
+            </ul>
+            <br>
+         </div>
+     </div>
+    </section>
+    
+    <div class="section grey fade-in">
+      <div class="two-col grey fade-in">
+
+        <!-- Left: text -->
+        <div>
+          <div class="section-marker">
+            <span class="asterisk">*</span>
+            <h2 class="section-heading">Solution Space: Wearables</h2>
+          </div>
+
+          <div class="prose">
+            <p>
+              Large-volume <strong>on-body delivery systems (OBDSs),</strong> wearable medical 
+              devices capable of administering large volumes (up to 10 mL) of 
+              liquid drugs over long durations (up to 6 hours) aim to relieve 
+              many of the challenges of traditional drug infusions.
+            </p>
+            <p>
+              However, even as more OBDS products (like the YpsoDose®, Neulasta®
+               Onpro®, and enFuse® pictured to the right) enter the market, they 
+               suffer from several key issues:
+            </p>
+            <ol>
+              <li>Most are single-use, requiring careful disposal due to their hypodermic needles inside, and leading to significant sustainability concerns.</li>
+              <li>Many have limited drug reservoir capacities (&lt; 10 mL).</li>
+              <li>Even with significant instruction from healthcare providers, <strong>users are uncomfortable administering their own infusions.</strong></li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- Right: images -->
+        <div style="display:flex; flex-direction:column; gap:1.5rem;">
+          <div class="project-image">
+            <img src="images/halo/halo_ypsodose.png" style ="width:clamp(200px, 70%, 400px);" alt="Photo of live usage of the 3-lead ECG system">
+            <p class="caption">Ypsodose® [cred: ondrugdelivery.com]</p>
+          </div>
+          <div class="project-image">
+            <img src="images/halo/halo_enfuse.png" style ="width:clamp(200px, 70%, 400px);" alt="Photo of live usage of the 3-lead ECG system">
+            <p class="caption">enFuse® [cred: enableinjections.com]</p>
+          </div>
+          <div class="project-image">
+            <img src="images/halo/halo_neulasta_onpro.png" style ="width:clamp(200px, 70%, 400px);" alt="Photo of live usage of the 3-lead ECG system">
+            <p class="caption">Neulasta® Onpro® [cred: neulasta.com]</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════
+      SECTION 2: The Solution
+      ════════════════════════════════════════════════════════ -->
+    <section class="section white fade-in" id="product">
+      <div class="heading-block">
+        <h2 class="section-heading">The Solution: HALŌ</h2>
+      </div>
+
+      <section class="section white story-section">
+
+        <p style="font-style: italic; text-align: center;">
+          Read the full HALŌ design research case study <a class="about-link" href="supporting_docs/HALO_Large_Volume_Drug_Delivery.pdf" target="_blank" style="text-decoration: underline;">here</a>.
+        </p>
+
+    </section>
+
+      <div class="contribution">
+        <div class="contribution-text">
+          <p>
+            The HALŌ is an eco-driven, partly-reusable large-volume 
+            dosing solution. More importantly, it’s built from the 
+            bottom up with <strong>lived user experiences</strong> in mind.  
+          </p>
+        </div>
+        <div>
+          <!-- REPLACE: screenshot of tolerance analysis table (Excel/Word document) -->
+          <img src="images/halo/halo_exploded.png" style="width:auto; height:100%; align-content:center;" alt="Screenshot of tolerance analysis table (Excel or Word document)">
+        </div>
+      </div>
+
+      <div class="contribution flip">
+        <div class="contribution-text">
+          <p>
+            The HALŌ prioritizes simplicity in its user interaction, with just
+            a three-state slider and an ergonomic, one-handed twistable ring
+            for adjusting the administration rate and status.
+          </p>
+        </div>
+        <div>
+          <!-- REPLACE: dark-background CAD render (e.g., green tinted OnShape view) -->
+          <img src="images/halo/halo_isometric.png" style="width:auto; height:100%;" alt="Dark-background CAD render (e.g., green tinted OnShape view)">
+        </div>
+      </div>
+
+      <div class="contribution">
+        <div class="contribution-text">
+          <p>
+            One of the most unsettling aspects of clinic-based infusions
+            is the lack of visibility into the process. The HALŌ addresses this
+            by providing a clear window into the drug reservoir and a simple
+            <strong>LED indicator</strong> (powered by a 650 mAh CR2450 battery)
+            to show the user the current status of their infusion.  
+          </p>
+        </div>
+        <div>
+          <!-- REPLACE: screenshot of tolerance analysis table (Excel/Word document) -->
+          <img src="images/halo/halo_front_face_ui.png" style="width:auto; height:100%; align-content:center;" alt="Screenshot of tolerance analysis table (Excel or Word document)">
+        </div>
+      </div>
+
+      <div class="contribution flip">
+        <div class="contribution-text">
+          <p>
+            The HALŌ is designed to be worn on the upper arm, with a low-profile
+            form factor (7 cm diameter, 3.4 cm height) that can be easily 
+            concealed under clothing.
+          </p>
+        </div>
+        <div>
+          <!-- REPLACE: dark-background CAD render (e.g., green tinted OnShape view) -->
+          <img src="images/halo/halo_prototype_on_arm.png" style="width:auto; height:100%;" alt="Dark-background CAD render (e.g., green tinted OnShape view)">
+        </div>
+      </div>
+
+    </section>
+    <section class="section grey story-section">
+      
+      <div class="project-image">
+        <!-- REPLACE: photo of 3 mL ENFit syringe with worn markings -->
+        <img src="images/halo/halo_cross_section.png" style ="width:clamp(400px, 90%, 700px);" alt="Photo of live usage of the 3-lead ECG system">
+        <p class="caption">Cross section of the HALŌ; plunger in green, elastomer dome for needle deployment in grey.</p>
+      </div>
+
+      <div class="project-image">
+        <!-- REPLACE: photo of 3 mL ENFit syringe with worn markings -->
+        <img src="images/halo/halo_two_parts.png" style ="width:clamp(400px, 90%, 700px);" alt="Photo of live usage of the 3-lead ECG system">
+        <p class="caption">The upper section of the HALŌ is reusable and battery-powered,
+          and contains all of the electronics necessary to control the infusion. The lower 
+          section is disposable and contains the drug reservoir and hypodermic needle.</p>
+        </p>
+      </div>
+
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════
+      SECTION 3: My Contributions
+      ════════════════════════════════════════════════════════ -->
+    <section id="role" class="section story-section">
+    <div class="section-inner">
+
+      <div class="heading-block">
+        <h2 class="section-heading">My Contributions</h2>
+      </div>
+
+      <!-- Contribution 1 -->
+      <div class="contribution">
+        <div class="contribution-text">
+          <h3>Complete Physical Product Design</h3>
+          <p>
+            After each round of user interviews, I added and modified HALŌ geometry 
+            to depict the device in its truest form. This included using OnShape CAD 
+            to sculpt each component and visualize relative sizing of important parts, 
+            like the 25-gauge hypodermic needle.
+          </p>
+        </div>
+        <div>
+          <img src="images/halo/halo_exploded.png" style="width:auto; height:100%;" alt="Dark-background CAD render (e.g., green tinted OnShape view)">
+        </div>
+      </div>
+
+      <!-- Contribution 2 (flipped) -->
+      <div class="contribution flip">
+        <div class="contribution-text">
+          <h3>Interview Guide Preparation</h3>
+          <p>
+            I wrote interview guides that gathered invaluable knowledge
+            from healthcare professionals and patients while valuing 
+            them as people, not just research subjects.
+          </p>
+        </div>
+        <div>
+          <!-- REPLACE: dark-background CAD render (e.g., green tinted OnShape view) -->
+          <img src="images/halo/halo_interview_guide_exerpt.png" style="width:auto; height:100%;" alt="Dark-background CAD render (e.g., green tinted OnShape view)">
+        </div>
+      </div>
+
+      <!-- Contribution 3 -->
+      <div class="contribution">
+        <div class="contribution-text">
+          <h3>User/Design Research Interviews</h3>
+          <p>
+            I conducted several interviews each with four different users 
+            to gather ideas, feedback, and opinions throughout the entire design process.
+          </p>
+        </div>
+        <div>
+          <!-- REPLACE: screenshot of tolerance analysis table (Excel/Word document) -->
+          <img src="images/halo/halo_napkin_sketch.png" style="width:100%; height:auto;" alt="Screenshot of tolerance analysis table (Excel or Word document)">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section grey story-section">
+      <div class="section-inner">
+
+        <div class="heading-block">
+          <h2 class="section-heading">Translating User Experiences into Design Decisions</h2>
+        </div>
+
+        <div class="research-flowchart">
+          <div class="flowchart-grid">
+            <div class="flowchart-header">User Statement</div>
+            <div class="flowchart-spacer"></div>
+            <div class="flowchart-header">Research Trend</div>
+            <div class="flowchart-spacer"></div>
+            <div class="flowchart-header">How Might We&hellip;</div>
+            <div class="flowchart-spacer"></div>
+            <div class="flowchart-header">Design Element</div>
+
+            <div class="flowchart-cell">"Yeah, I don’t have many complaints other than that I wish [the drug] wasn’t necessary."</div>
+            <div class="flowchart-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg></div>
+            <div class="flowchart-cell">Patients only want to think about the treatment, not the process.</div>
+            <div class="flowchart-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg></div>
+            <div class="flowchart-cell">…take “patients don’t want to think about the process” to the extreme?</div>
+            <div class="flowchart-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg></div>
+            <div class="flowchart-cell">Three-state LED ring indicating idle, active, and complete infusion status.</div>
+
+            <div class="flowchart-cell">"I went through three sets of instructions as well as a video online to figuring things out."</div>
+            <div class="flowchart-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg></div>
+            <div class="flowchart-cell">There is no right answer to how SDD should look, but there are wrong ones.</div>
+            <div class="flowchart-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg></div>
+            <div class="flowchart-cell">…use a device tutorial to increase the accessibility of the SDD process?</div>
+            <div class="flowchart-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg></div>
+            <div class="flowchart-cell">Single-handed twist-ring activation requiring no clinical setup step.</div>
+
+            <div class="flowchart-cell">"One time, I saw a little air bubble through the window and I freaked out."</div>
+            <div class="flowchart-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg></div>
+            <div class="flowchart-cell">The positive parts of the process are far more consistent than the negative parts.</div>
+            <div class="flowchart-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg></div>
+            <div class="flowchart-cell">…add to the existing customizability of self-injection devices?</div>
+            <div class="flowchart-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg></div>
+            <div class="flowchart-cell">Low-profile upper-arm form factor (7 cm diameter) concealable under clothing.</div>
+
+            <div class="flowchart-cell">"I use an old Tupperware to store the old needles. I would definitely be more worried about throwing stuff out if I had little kids, though."</div>
+            <div class="flowchart-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg></div>
+            <div class="flowchart-cell">The features patients care most about give the device a place in their lives, and have little to do with drug delivery.</div>
+            <div class="flowchart-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg></div>
+            <div class="flowchart-cell">…allow the device to be easily usable in unusual settings?</div>
+            <div class="flowchart-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg></div>
+            <div class="flowchart-cell">Separable disposable lower cartridge isolating the needle for safe removal.</div>
+          </div><!-- /.flowchart-grid -->
+        </div><!-- /.research-flowchart -->
+
+      </div>
+  </section>
+
+    <!-- ── Footer ─────────────────────────────────────────────── -->
+      </div><!-- /.story-content-wrapper -->
+    </div><!-- /.story-container -->
+
+  
+
+    <!-- ── Footer ─────────────────────────────────────────────── -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-photo">
+        <!-- REPLACE: circular headshot photo -->
+        <img
+          src="/images/nathaniel_rogers_headshot_small.jpg" 
+          alt="Photo"
+          class="square"
+          style="width:44px;height:44px;"
+        />    
+      </div>
+
+      <a href="mailto:nrogers@u.northwestern.edu" class="footer-link">
+        <!-- envelope icon -->
+        <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="4" width="20" height="16" rx="2"/>
+          <polyline points="2,4 12,13 22,4"/>
+        </svg>
+        Email
+      </a>
+
+      <a href="https://www.linkedin.com/in/nathaniel-r0gers/" target="_blank" rel="noopener" class="footer-link">
+        <!-- linkedin icon -->
+        <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+          <rect x="2" y="9" width="4" height="12"/>
+          <circle cx="4" cy="4" r="2"/>
+        </svg>
+        LinkedIn
+      </a>
+
+      <a href="supporting_docs/nathaniel_rogers_resume.pdf" target="_blank" rel="noopener" class="footer-link">
+        <!-- document file icon -->
+        <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <polyline points="14 2 14 8 20 8"/>
+          <line x1="16" y1="13" x2="8" y2="13"/>
+          <line x1="16" y1="17" x2="8" y2="17"/>
+        </svg>
+        Resume
+      </a>
+
+      <!-- copyright notice on far right of footer -->
+      <span class="footer-copyright">
+        &copy; 2026 Nathaniel Rogers
+      </span>
+
+    </div>
+  </footer>
+
+
+  <script src="js/nav.js"></script>
+  <script>
+    (function(){
+      function onReady(fn){
+        if(document.readyState !== 'loading') fn();
+        else document.addEventListener('DOMContentLoaded', fn);
+      }
+
+      onReady(function(){
+        var fadeEls = document.querySelectorAll('.fade-in, .contribution');
+        if(!fadeEls || fadeEls.length === 0) return;
+
+        var io = new IntersectionObserver(function(entries){
+          entries.forEach(function(entry){
+            if(entry.isIntersecting){
+              entry.target.classList.add('visible');
+              io.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12 });
+
+        fadeEls.forEach(function(node){ io.observe(node); });
+      });
+    })();
+  </script>
+</body>
+</html>

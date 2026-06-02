@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nathaniel Rogers — Biomedical Engineering Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .hero-image-col img:hover {
+      cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48'%3E%3Ccircle cx='16' cy='16' r='10' fill='rgba(139,26,26,0.45)' /%3E%3C/svg%3E") 16 16, auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Navigation ─────────────────────────────────────────── -->
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="/images/logo_small.png" 
+          alt="Logo"
+          height="60"
+          width="60"
+        />
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="medical-devices.html">Medical Devices</a></li>
+        <li><a href="about.html">About Me</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── Hero ───────────────────────────────────────────────── -->
+  <section class="hero home-hero">
+    <div class="hero-split">
+
+      <div class="hero-image-col">
+        <!-- REPLACE: anatomical figure (frog/musculature engraving) used as hero image -->
+        <img
+          src="/images/index/index_hero_photo.JPG" 
+          alt="Photo"
+          class="square"
+        /> 
+      </div>
+
+      <!-- Right: intro text on teal -->
+      <div class="hero-text-col">
+
+        <h1 class="display-heading large">Hello,</h1>
+        <h1 class="display-heading light">I'm Nathaniel<br>Rogers.</h1>
+
+        <p class="home-intro-body">
+          I'm a <strong>biomedical engineering</strong> student at the
+          <strong>Northwestern University</strong> McCormick School of Engineering
+          and Applied Science. I'm also pursuing the <strong>Segal Design Certificate</strong>.
+        </p>
+
+        <p class="home-intro-body">
+          I'm an opportunistic <strong>mechanical engineer</strong>,
+          <strong>electrical engineer</strong>, <strong>experimental designer</strong>,
+          and <strong>project manager</strong>—whatever the project needs. Deep down,
+          I just want to design and engineer <strong>physical systems</strong> that
+          make people <strong>healthier</strong>.
+        </p>
+
+        <p class="home-cta-links">
+          Take a look at some of the
+          <a href="medical-devices.html">medical devices</a> I've designed or
+          learn more <a href="about.html">about me</a>.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Footer ─────────────────────────────────────────────── -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-photo">
+        <!-- REPLACE: circular headshot photo -->
+        <img
+          src="/images/nathaniel_rogers_headshot_small.jpg" 
+          alt="Photo"
+          class="square"
+          style="width:44px;height:44px;"
+        />    
+      </div>
+
+      <a href="mailto:nrogers@u.northwestern.edu" class="footer-link">
+        <!-- envelope icon -->
+        <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="4" width="20" height="16" rx="2"/>
+          <polyline points="2,4 12,13 22,4"/>
+        </svg>
+        Email
+      </a>
+
+      <a href="https://www.linkedin.com/in/nathaniel-r0gers/" target="_blank" rel="noopener" class="footer-link">
+        <!-- linkedin icon -->
+        <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+          <rect x="2" y="9" width="4" height="12"/>
+          <circle cx="4" cy="4" r="2"/>
+        </svg>
+        LinkedIn
+      </a>
+
+      <a href="supporting_docs/nathaniel_rogers_resume.pdf" target="_blank" rel="noopener" class="footer-link">
+        <!-- document file icon -->
+        <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <polyline points="14 2 14 8 20 8"/>
+          <line x1="16" y1="13" x2="8" y2="13"/>
+          <line x1="16" y1="17" x2="8" y2="17"/>
+        </svg>
+        Resume
+      </a>
+
+      <!-- copyright notice on far right of footer -->
+      <span class="footer-copyright">
+        Photo: Jackson Wang, <a href="https://www.instagram.com/wang.photos/" class="about-link" target="_blank">@wang.photos</a> | &copy; 2026 Nathaniel Rogers
+        <br>
+      </span>
+
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+</body>
+</html>

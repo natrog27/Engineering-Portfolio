@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arm Stabilizer — Nathaniel Rogers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ── Navigation ─────────────────────────────────────────── -->
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="/images/logo_small.png" 
+          alt="Logo"
+          height="60"
+          width="60"
+        />
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="medical-devices.html" class="active">Medical Devices</a></li>
+        <li><a href="about.html">About Me</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── Back Arrow ─────────────────────────────────────────── -->
+  <div style="background-color: var(--teal);">
+    <a href="medical-devices.html" class="back-arrow" style="margin-bottom: 1rem;display:inline-flex;align-items:center;gap:6px;font-size:0.9rem;color:var(--black);">
+      &#8826; Back
+    </a>
+  </div>
+
+  <!-- ── Project Hero ───────────────────────────────────────── -->
+  <section style="background: var(--teal);">
+    <div class="project-hero-grid">
+
+      <!-- Left: body region illustration -->
+      <div class="project-hero-img">
+        <!-- REPLACE: cropped Vesalius torso/abdomen figure with red dot overlay -->
+        <img src="images/arm-stabilizer/arm-stabilizer_silhouette.png" alt="Arm Stabilizer Silhouette" />
+        <span class="project-dot project-dot--large" style="top: 35%; left: 65%;"></span>
+
+      </div>
+
+      <!-- Right: title block -->
+      <div class="project-hero-text">
+        <div>
+          <h1 class="project-title" style="font-size: clamp(2rem, 6vw, 5rem);">Attachable Arm Stabilizer*</h1>
+        </div>
+        <p class="project-subtitle">
+          *Bringing independence to power wheelchair drivers with cerebral palsy.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Skill Tags Bar ─────────────────────────────────────── -->
+  <div class="skill-bar fade-in">
+    <div class="skill-bar-inner">
+      <span class="skill-bar-label">Key Skills:</span>
+      <span class="skill-tag skill-tag--black">Material Selection</span>
+      <span class="skill-tag skill-tag--black">Prototype Fabrication</span>
+      <span class="skill-tag skill-tag--black">User Research</span>
+      <span class="skill-tag skill-tag--grey">Design Sketching</span>
+    </div>
+  </div>
+
+  <!-- ── Story Container: Left vertical rail + content wrapper ── -->
+  <div class="story-container">
+    <nav class="vertical-rail" aria-label="Section navigation">
+      <a href="#" class="rail-link" data-target="challenge">The Challenge</a>
+      <a href="#" class="rail-link" data-target="product">The Product</a>
+      <a href="#" class="rail-link" data-target="role">My Role</a>
+    </nav>
+
+    <div class="story-content-wrapper">
+
+  <!-- ════════════════════════════════════════════════════════
+    SECTION 1: The Problem
+    ════════════════════════════════════════════════════════ -->
+  <section id="challenge" class="section story-section">
+    <span>
+      <!-- STICKY VERTICAL NAV BAR -->
+    </span>
+    <span><div class="section-inner">
+      <div class="two-col">
+
+        <!-- Left: text -->
+        <div>
+          <div class="section-marker">
+            <span class="asterisk">*</span>
+            <h2 class="section-heading">Promoting Wheelchair User Safety and Independence</h2>
+          </div>
+
+          <div class="prose">
+            <p>
+              The <strong>Northern Suburban Special Recreation Association (NSSRA)</strong>
+              approached me and my classmates with a simple issue: two of their participants
+              who use power wheelchairs—Dane and Rachel—were, in their own words, <strong>bad drivers</strong>. 
+            </p>
+            <p>
+              It wasn't their fault, of course. Dane and Rachel both have <strong>cerebral 
+              palsy</strong>, which makes it difficult for them to finely control their hand
+              and arm movements. Meanwhile, their wheelchairs, which are supposed to be
+              an extension of their bodies and promote their independence, were <strong>not 
+              designed for their needs</strong>.
+            </p>
+            <p>
+              After meeting and speaking with Dane and Rachel, my team and I noticed that 
+              when operating their wheelchairs, to access the joystick, they had to
+              hold their arms in unnatural, unsupported positions. This led to accidental
+              movements, and the "bad driving" that NSSRA had described.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right: images -->
+        <div style="display:flex; flex-direction:column; gap:1.5rem;">
+          <div class="project-image">
+            <!-- REPLACE: photo of 3 mL ENFit syringe with worn markings -->
+            <img src="images/arm-stabilizer/arm-stabilizer_user_photo_1.png" style ="width:clamp(200px, 70%, 400px);" alt="3 mL ENFit syringe with worn markings">
+            <p class="caption">Dane (user) unable to place arm on wheelchair armrest</p>
+          </div>
+          <div class="project-image">
+            <img src="images/arm-stabilizer/arm-stabilizer_user_photo_2.png" style ="width:clamp(200px, 70%, 400px);" alt="Parent-caregiver's disorganized kitchen 'pharmacy' drawer">
+            <p class="caption">Rachel (user) unable to place arm on wheelchair armrest</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    </span>
+  </section>
+
+    <!-- ════════════════════════════════════════════════════════
+      SECTION 2: The Solution
+      ════════════════════════════════════════════════════════ -->
+    <section id="product" class="section grey story-section">
+    <div class="section-inner">
+      <div class="two-col">
+        <!-- Left: text -->
+        <div>
+          <div class="section-marker">
+            <span class="asterisk">*</span>
+            <h2 class="section-heading">The Attachable Arm Stabilizer</h2>
+          </div>
+
+          <div class="prose">
+            <p>
+              Our design, the Attachable Arm Stabilizer, is a customized 
+              cushion for users' driving arms. The Stabilizer also features 
+              two Velcro straps that allow for easy attachment to Dane and Rachel’s 
+              current armrests.
+            </p>
+            <p>
+              The Stabilizer was designed to meet three main 
+              requirements:
+            </p>
+            <ol>
+              <li><strong>Independence, </strong></li>
+              <li><strong>Accessibility & Ease of Use </strong></li>
+              <li> <strong>Durability & Maintenance</strong></li>
+            </ol>
+            <p>
+              A complete design report for the Attachable Arm Stabilizer
+              can be found <a class="about-link" href="supporting_docs/Report_Attachable_Arm_Stabilizer.pdf" target="_blank" style="text-decoration: underline;">here</a> .
+            </p>
+          </div>
+        </div>
+
+        <!-- Right: images -->
+        <div style="display:flex; flex-direction:column; gap:1.5rem;">
+          <div class="project-image">
+            <!-- REPLACE: photo of 3 mL ENFit syringe with worn markings -->
+            <img src="images/arm-stabilizer/arm-stabilizer_sketch_1.png" style ="width:clamp(200px, 70%, 400px);" alt="3 mL ENFit syringe with worn markings">
+            <p class="caption">Sketch of Dane’s Stabilizer</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    </section>
+    <section class="section white fade-in">
+      <!-- Features grid -->
+      <div class="heading-block">
+        <h2 class="section-heading">Design Requirements & Decisions</h2>
+      </div>
+
+      <div class="three-col">
+        <div class="feature-card">
+          <h4 style="text-decoration: underline 2px var(--teal); text-underline-offset: 8px; align-self: center;">User Independence</h4>
+          <p style="padding-top: 1rem;">
+            The Stabilizer supports the driving arm so users can maintain 
+            joystick control without holding their arm up manually, reducing 
+            accidental movement and fatigue.
+          </p>
+        </div>
+        <div class="feature-card">
+          <h4 style="text-decoration: underline 2px var(--teal); text-underline-offset: 8px; align-self: center;">Quick Attachment</h4>
+          <p style="padding-top: 1rem;">
+            Flexible Velcro straps let the Stabilizer attach to most standard 
+            wheelchair armrests in seconds, making it easy for users and 
+            caregivers to install.
+          </p>
+        </div>
+        <div class="feature-card">
+          <h4 style="text-decoration: underline 2px var(--teal); text-underline-offset: 8px; align-self: center;">Comfort &amp; Safety</h4>
+          <p style="padding-top: 1rem;">
+            The foam cushion is soft yet stable, delivering comfortable arm 
+            support while preserving range of motion and improving driving 
+            confidence.
+          </p>
+        </div>
+      </div>
+
+    </section>
+    <section class="section story-section fade-in">
+      <div class="two-col">
+        <!-- Left: image 1 -->
+        <div style="display:flex; flex-direction:column; gap:1.5rem; background-color: var(--grey-light)">
+          <div class="project-image" style="padding-top: 3rem">
+            <!-- REPLACE: photo of 3 mL ENFit syringe with worn markings -->
+            <img src="images/arm-stabilizer/arm-stabilizer_render_dane.png" style ="width:clamp(200px, 80%, 400px);" alt="3 mL ENFit syringe with worn markings">
+            <p class="caption">Render of Dane's Prototype</p>
+          </div>
+          <br>
+          <div class="project-image" style="padding-bottom: 3rem;">
+            <img src="images/arm-stabilizer/arm-stabilizer_dane_prototype.png" style ="width:clamp(200px, 80%, 400px);" alt="3 mL ENFit syringe with worn markings">
+            <p class="caption">Annotated Photo of Dane's Prototype</p>
+          </div>
+        </div>
+
+        <!-- Right: image 2 -->
+        <div style="display:flex; flex-direction:column; gap:1.5rem; background-color: var(--grey-light);">
+          <div class="project-image" style="padding-top: 3rem;">
+            <!-- REPLACE: photo of 3 mL ENFit syringe with worn markings -->
+            <img src="images/arm-stabilizer/arm-stabilizer_render_rachel.png" style ="width:clamp(200px, 80%, 400px); " alt="3 mL ENFit syringe with worn markings">
+            <p class="caption">Render of Rachel's Prototype</p>
+          </div>
+          <br>
+          <div class="project-image" style="padding-bottom: 3rem;">
+            <!-- REPLACE: photo of 3 mL ENFit syringe with worn markings -->
+            <img src="images/arm-stabilizer/arm-stabilizer_rachel_prototype.png" style ="width:clamp(200px, 80%, 400px); " alt="3 mL ENFit syringe with worn markings">
+            <p class="caption">Annotated Photo of Dane's Prototype</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════
+      SECTION 3: My Contributions
+      ════════════════════════════════════════════════════════ -->
+    <section id="role" class="section story-section">
+    <div class="section-inner">
+
+      <div class="heading-block">
+        <h2 class="section-heading">My Contributions</h2>
+      </div>
+
+      <!-- Contribution 1 -->
+      <div class="contribution">
+        <div class="contribution-text">
+          <h3>Prototype Fabrication</h3>
+          <p>
+            Early in my engineering career, I learned how to use tools
+            for manipulating both hard and soft materials to produce
+            proof-of-concept prototypes.
+          </p>
+        </div>
+        <div>
+          <!-- REPLACE: photo or render of ENdose final prototype -->
+          <img src="images/arm-stabilizer/arm-stabilizer_rapid_prototype.png" style="height:100%; width:auto;" alt="Final ENdose prototype (render)">
+        </div>
+      </div>
+
+      <!-- Contribution 2 (flipped) -->
+      <div class="contribution flip">
+        <div class="contribution-text">
+          <h3>Design Sketches</h3>
+          <p>
+            I prepared napkin sketches both for communicating ideas during
+            the project and for later polishing and use in the final report.
+          </p>
+        </div>
+        <div>
+          <!-- REPLACE: dark-background CAD render (e.g., green tinted OnShape view) -->
+          <img src="images/arm-stabilizer/arm-stabilizer_sketch_1.png" style="width:100%; height:auto;" alt="Dark-background CAD render (e.g., green tinted OnShape view)">
+        </div>
+      </div>
+
+      <!-- Contribution 3 -->
+      <div class="contribution">
+        <div class="contribution-text">
+          <h3>User Research</h3>
+          <p>
+            I spoke with our end users and other participants at
+            the NSSRA to learn about how they interact with their 
+            mobility aids, and how those mobility aids interact with
+            their surrounding environment.
+          </p>
+        </div>
+        <div>
+          <!-- large teal asterisk for this image instead of a true image -->
+          <div class="asterisk" style="width:100%; height:100%; min-height:300px; display:flex; align-items:center; justify-content:center; font-size:clamp(100px, 20vw, 200px); color:var(--teal);">
+            *
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- ── Footer ─────────────────────────────────────────────── -->
+      </div><!-- /.story-content-wrapper -->
+    </div><!-- /.story-container -->
+
+    <!-- ── Footer ─────────────────────────────────────────────── -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-photo">
+        <!-- REPLACE: circular headshot photo -->
+        <img
+          src="/images/nathaniel_rogers_headshot_small.jpg" 
+          alt="Photo"
+          class="square"
+          style="width:44px;height:44px;"
+        />    
+      </div>
+
+      <a href="mailto:nrogers@u.northwestern.edu" class="footer-link">
+        <!-- envelope icon -->
+        <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="4" width="20" height="16" rx="2"/>
+          <polyline points="2,4 12,13 22,4"/>
+        </svg>
+        Email
+      </a>
+
+      <a href="https://www.linkedin.com/in/nathaniel-r0gers/" target="_blank" rel="noopener" class="footer-link">
+        <!-- linkedin icon -->
+        <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+          <rect x="2" y="9" width="4" height="12"/>
+          <circle cx="4" cy="4" r="2"/>
+        </svg>
+        LinkedIn
+      </a>
+
+      <a href="supporting_docs/nathaniel_rogers_resume.pdf" target="_blank" rel="noopener" class="footer-link">
+        <!-- document file icon -->
+        <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <polyline points="14 2 14 8 20 8"/>
+          <line x1="16" y1="13" x2="8" y2="13"/>
+          <line x1="16" y1="17" x2="8" y2="17"/>
+        </svg>
+        Resume
+      </a>
+
+      <!-- copyright notice on far right of footer -->
+      <span class="footer-copyright">
+        &copy; 2026 Nathaniel Rogers
+      </span>
+
+    </div>
+  </footer>
+
+
+  <script src="js/nav.js"></script>
+  <script>
+    (function(){
+      function onReady(fn){
+        if(document.readyState !== 'loading') fn();
+        else document.addEventListener('DOMContentLoaded', fn);
+      }
+
+      onReady(function(){
+        var fadeEls = document.querySelectorAll('.fade-in, .contribution');
+        if(!fadeEls || fadeEls.length === 0) return;
+
+        var io = new IntersectionObserver(function(entries){
+          entries.forEach(function(entry){
+            if(entry.isIntersecting){
+              entry.target.classList.add('visible');
+              io.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12 });
+
+        fadeEls.forEach(function(node){ io.observe(node); });
+      });
+    })();
+  </script>
+</body>
+</html>

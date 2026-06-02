@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dual Bandpass ECG — Nathaniel Rogers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ── Navigation ─────────────────────────────────────────── -->
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="/images/logo_small.png" 
+          alt="Logo"
+          height="60"
+          width="60"
+        />
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="medical-devices.html" class="active">Medical Devices</a></li>
+        <li><a href="about.html">About Me</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── Back Arrow ─────────────────────────────────────────── -->
+  <div style="background-color: var(--teal);">
+    <a href="medical-devices.html" class="back-arrow" style="margin-bottom: 1rem;display:inline-flex;align-items:center;gap:6px;font-size:0.9rem;color:var(--black);">
+      &#8826; Back
+    </a>
+  </div>
+
+  <!-- ── Project Hero ───────────────────────────────────────── -->
+  <section style="background: var(--teal);">
+    <div class="project-hero-grid">
+
+      <!-- Left: body region illustration -->
+      <div class="project-hero-img">
+        <img src="images/ecg/ecg_silhouette.png" alt="ECG Silhouette" />
+        <span class="project-dot project-dot--large" style="top: 50%; left: 55%;"></span>
+
+      </div>
+
+      <!-- Right: title block -->
+      <div class="project-hero-text">
+        <div>
+          <h1 class="project-title">Dual Bandpass ECG*</h1>
+        </div>
+        <p class="project-subtitle">
+          *Collecting and processing electrophysiological signals from scratch.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Skill Tags Bar ─────────────────────────────────────── -->
+  <div class="skill-bar fade-in">
+    <div class="skill-bar-inner">
+      <span class="skill-bar-label">Key Skills:</span>
+      <span class="skill-tag skill-tag--black">Circuit Design</span>
+      <span class="skill-tag skill-tag--black">Analog Signal Processing</span>
+      <span class="skill-tag skill-tag--black">Electrophysiology</span>
+      <span class="skill-tag skill-tag--grey">Circuit Assembly</span>
+      <span class="skill-tag skill-tag--grey">Filter Design</span>
+      <span class="skill-tag skill-tag--grey">Electronics Troubleshooting</span>
+    </div>
+  </div>
+
+  <!-- ── Story Container: Left vertical rail + content wrapper ── -->
+  <div class="story-container">
+    <nav class="vertical-rail" aria-label="Section navigation">
+      <a href="#" class="rail-link" data-target="challenge">The Challenge</a>
+      <a href="#" class="rail-link" data-target="product">The Product</a>
+      <a href="#" class="rail-link" data-target="role">My Role</a>
+    </nav>
+
+    <div class="story-content-wrapper">
+
+  <!-- ════════════════════════════════════════════════════════
+    SECTION 1: The Problem
+    ════════════════════════════════════════════════════════ -->
+  <section id="challenge" class="section story-section">
+    <span><div class="section-inner">
+      <div class="two-col">
+
+        <!-- Left: text -->
+        <div>
+          <div class="section-marker">
+            <span class="asterisk">*</span>
+            <h2 class="section-heading">Monitoring Heart Health with Low-Cost Electronics</h2>
+          </div>
+
+          <div class="prose">
+            <p>
+                <strong>Electrocardiography (ECG)</strong> is an established diagnostic tool used to assess the 
+                health of a patient’s heart. However, to measure the conductive and contractile 
+                patterns of the heart non-invasively requires the collection and processing of 
+                tiny, millivolt-level voltage differences across discrete skin locations. These 
+                <strong>electrical signals</strong> are easily overwhelmed by artifacts related to electrode placement and 
+                quality, noise, and drift. 
+
+            </p>
+            <p>
+              In my junior-year BME 308: Biomedical Signals and Circuits class, I was charged 
+              with building a fully-functional <strong>3-lead ECG</strong> collection system from scratch, using 
+              low-cost raw components, including <strong>resistors, capacitors, op-amps, and a $5 
+              instrumentation op-amp</strong>.  
+            </p>
+          </div>
+        </div>
+
+        <!-- Right: images -->
+        <div style="display:flex; flex-direction:column; gap:1.5rem;">
+          <div class="project-image">
+            <!-- REPLACE: photo of 3 mL ENFit syringe with worn markings -->
+            <img src="images/ecg/ecg_testing_photo.png" style ="width:clamp(200px, 70%, 400px);" alt="Photo of live usage of the 3-lead ECG system">
+            <p class="caption">Live usage of the 3-lead ECG system</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </span>
+  </section>
+
+  <!-- Sub-section: What it Meant... (grey background, separate fade-in) -->
+  <div class="section grey fade-in">
+    <div class="section-inner">
+      <div class="section-marker">
+        <span class="asterisk">*</span>
+        <h2 class="section-heading">What it Meant to Build the Monitor from Scratch</h2>
+      </div>
+
+      <!-- Bulleted list of five placeholder text bullets -->
+      <ul class="project-bullets">
+        <li>Design and build an amplification system to bring voltage differences up to interpretable magnitude</li>
+        <li>Design and build two band pass filter topologies to optimize performance</li>
+        <li>Account for real variability in patient heart rate</li>
+        <li>Troubleshoot both hardware and software issues</li>
+        <li>Develop the capacity to rapidly fabricate future ECG-measuring device prototypes</li>
+      </ul>
+    </div>
+  </div>
+
+    <!-- ════════════════════════════════════════════════════════
+      SECTION 2: The Solution
+      ════════════════════════════════════════════════════════ -->
+    <section class="section white fade-in" id="product">
+      <!-- Features grid -->
+      <div class="heading-block">
+        <h2 class="section-heading">Results</h2>
+      </div>
+
+      <div class="project-image">
+        <!-- REPLACE: photo of 3 mL ENFit syringe with worn markings -->
+        <img src="images/ecg/annotated_ecg_traces_dual_bandpass_filter.png" style ="width:clamp(400px, 90%, 700px);" alt="Photo of live usage of the 3-lead ECG system">
+        <p class="caption">Annotated ECG traces with dual bandpass filters for signal quality comparison</p>
+      </div>
+
+      <div class="project-image">
+        <!-- REPLACE: photo of 3 mL ENFit syringe with worn markings -->
+        <img src="images/ecg/direct_ecg_filter_comparison.png" style ="width:clamp(400px, 90%, 700px);" alt="Photo of live usage of the 3-lead ECG system">
+        <p class="caption">Direct ECG filter comparison</p>
+      </div>
+
+      <div class="project-image">
+        <!-- REPLACE: photo of 3 mL ENFit syringe with worn markings -->
+        <img src="images/ecg/fft_ecg_bandpass_filter_comparison.png" style ="width:clamp(400px, 90%, 700px);" alt="Photo of live usage of the 3-lead ECG system">
+        <p class="caption">Fast Fourier Transform (FFT) of ECG bandpass filter comparison</p>
+      </div>
+    </section>
+
+    <section class="section white story-section">
+
+      <p style="font-style: italic; text-align: center;">
+        Read more about the dual-bandpass 3-lead ECG in my 
+        <a class="about-link" href="supporting_docs/BME_308_Dual_Bandpass_ECG.pdf" target="_blank" style="text-decoration: underline;">lab report</a>.
+      </p>
+
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════
+      SECTION 3: My Contributions
+      ════════════════════════════════════════════════════════ -->
+    <section id="role" class="section grey story-section">
+    <div class="section-inner">
+
+      <div class="heading-block">
+        <h2 class="section-heading">The Process</h2>
+      </div>
+
+      <!-- Contribution 1 -->
+      <div class="contribution">
+        <div class="contribution-text">
+          <h3>1. Gain & Cutoff Frequency Calculation</h3>
+          <p>
+            I began with known <strong>clinically expected</strong> values for ECG signal magnitude
+            at the skin (~1 mV) and resting heart rate (~60 bpm -> 1 Hz). I then chose
+            filter cutoff frequencies that would allow important ECG signal morphology
+            (namely, the QRS complex) to pass through while attenuating noise and drift.
+            <br><br>
+            I also had to choose values that were possible to build with the limited 
+            set of resistors and capacitors available.
+          </p>
+        </div>
+        <div>
+          <!-- large teal asterisk for this image instead of a true image -->
+          <div class="asterisk" style="width:100%; height:100%; min-height:300px; display:flex; align-items:center; justify-content:center; font-size:clamp(100px, 20vw, 200px); color:var(--teal);">
+            *
+          </div>
+        </div>
+      </div>
+
+      <!-- Contribution 2 (flipped) -->
+      <div class="contribution flip">
+        <div class="contribution-text">
+          <h3>2. System Design (Block Diagram)</h3>
+          <p>
+            To ease communication and debugging later in the project,
+            I drafted a block diagram representing the system's stepwise
+            manipulation of the signal into a usable form.
+          </p>
+        </div>
+        <div>
+          <!-- REPLACE: dark-background CAD render (e.g., green tinted OnShape view) -->
+          <img src="images/ecg/dual_bandpass_ecg_block_diagram.png" style="width:100%; height:auto;" alt="Dark-background CAD render (e.g., green tinted OnShape view)">
+        </div>
+      </div>
+
+      <!-- Contribution 3 -->
+      <div class="contribution">
+        <div class="contribution-text">
+          <h3>3. LTSpice Circuit Design</h3>
+          <p>
+            Next, to <strong>validate</strong> my filter designs, I designed the ciruit I 
+            was planning to build in LTSpice. This allowed me to simulate the frequency
+            response of the system and iterate on my resistor and capacitor selections
+            without the time and component wear of building and testing multiple physical prototypes. 
+          </p>
+        </div>
+        <div>
+          <!-- REPLACE: screenshot of tolerance analysis table (Excel/Word document) -->
+          <img src="images/ecg/dual_bandpass_ecg_ltspice_diagram.png" style="width:100%; height:auto;" alt="Screenshot of tolerance analysis table (Excel or Word document)">
+        </div>
+      </div>
+
+      <!-- Contribution 4 (flipped) -->
+      <div class="contribution flip">
+        <div class="contribution-text">
+          <h3>4. Frequency Response Simulation</h3>
+          <p>
+            I collected and interpreted the Bode plot of the designed circuit
+            to verify that the frequency components within the passband weren't 
+            over-attenuated.
+          </p>
+        </div>
+        <div>
+          <!-- REPLACE: photo of multiple 3D printed ENdose prototypes on workbench -->
+          <img src="images/ecg/ecg_bode_plot.png" style="width:100%; height:auto;" alt="Multiple 3D printed ENdose prototypes on workbench (photo)">
+        </div>
+      </div>
+
+      <!-- Contribution 6 (flipped) -->
+      <div class="contribution">
+        <div class="contribution-text">
+          <h3>5. Manual Circuit Assembly</h3>
+          <p>
+            Next, I assembled the circuit on a breadboard and connected it
+            to a miniature oscilloscope for signal inspection and data collection.
+          </p>
+        </div>
+        <div>
+          <img src="images/ecg/ecg_breadboard.png" style="width:100%; height:auto;" alt="Patent drawing or USPTO figure excerpt (screenshot or render)">
+          <p class="caption">(Not actually the ECG circuit, but similar)</p>
+        </div>
+      </div>
+
+      <div class="contribution flip">
+        <div class="contribution-text">
+          <h3>6. Unity Gain Buffer Troubleshooting</h3>
+          <p>
+            Naturally, I ran into a several bugs and mistakes made during
+            the design and assembly process. By measuring the output at 
+            several test points in the circuit, I identified and resolved 
+            an issue in the wiring of the unity gain buffer stage.
+          </p>
+        </div>
+        <div class="asterisk" style="width:100%; height:100%; min-height:300px; display:flex; align-items:center; justify-content:center; font-size:clamp(100px, 20vw, 200px); color:var(--teal);">
+            *
+          </div>
+      </div>
+
+      <div class="contribution flip">
+        <div class="contribution-text">
+          <h3>8. Raw Signal Plotting</h3>
+          <p>
+            I then collected and plotted several samples of raw ECG data using the circuit to 
+            gauge the functionality of my filters and determine qualitative differences
+            in their performance.
+          </p>
+        </div>
+        <div>
+          <img src="images/ecg/direct_ecg_filter_comparison.png" style="width:100%; height:auto;" alt="Abaqus FEA screenshot showing stress and deformation on cantilever latch mechanism">
+        </div>
+      </div>
+
+      <div class="contribution">
+        <div class="contribution-text">
+          <h3>9. Peak-Picking for Heart Rate Monitoring</h3>
+          <p>
+            Using the signal Python library, I implemented a peak-picking 
+            algorithm to identify the R-peaks in the ECG signal and calculate 
+            the heart rate of the sample from the meantime between peaks.
+          </p>
+        </div>
+        <div>
+          <img src="images/ecg/annotated_ecg_traces_dual_bandpass_filter.png" style="width:100%; height:auto;" alt="Screenshot of ASTM D2911 standard document page (showing bottle finish specifications)">
+        </div>
+      </div>
+
+      <!-- Color Coding (flipped) -->
+      <div class="contribution flip">
+        <div class="contribution-text">
+          <h3>10. FFT for Filter Comparison</h3>
+          <p>
+            Finally, I compared the data collected at the outputs of both 
+            filter toplogies using a Fast Fourier Transform (FFT) to visualize the frequency
+            components of the signal and determine which filter performed for 
+            the intended application. 
+          </p>
+        </div>
+        <div>
+          <!-- REPLACE: CAD render or photo showing color-coded sticker dots on ENdose cap -->
+          <img src="images/ecg/fft_ecg_bandpass_filter_comparison.png" style="width:100%; height:auto;" alt="CAD render or photo showing color-coded sticker dots on ENdose cap">
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- ── Footer ─────────────────────────────────────────────── -->
+      </div><!-- /.story-content-wrapper -->
+    </div><!-- /.story-container -->
+
+    <!-- ── Footer ─────────────────────────────────────────────── -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-photo">
+        <!-- REPLACE: circular headshot photo -->
+        <img
+          src="/images/nathaniel_rogers_headshot_small.jpg" 
+          alt="Photo"
+          class="square"
+          style="width:44px;height:44px;"
+        />    
+      </div>
+
+      <a href="mailto:nrogers@u.northwestern.edu" class="footer-link">
+        <!-- envelope icon -->
+        <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="4" width="20" height="16" rx="2"/>
+          <polyline points="2,4 12,13 22,4"/>
+        </svg>
+        Email
+      </a>
+
+      <a href="https://www.linkedin.com/in/nathaniel-r0gers/" target="_blank" rel="noopener" class="footer-link">
+        <!-- linkedin icon -->
+        <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+          <rect x="2" y="9" width="4" height="12"/>
+          <circle cx="4" cy="4" r="2"/>
+        </svg>
+        LinkedIn
+      </a>
+
+      <a href="supporting_docs/nathaniel_rogers_resume.pdf" target="_blank" rel="noopener" class="footer-link">
+        <!-- document file icon -->
+        <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <polyline points="14 2 14 8 20 8"/>
+          <line x1="16" y1="13" x2="8" y2="13"/>
+          <line x1="16" y1="17" x2="8" y2="17"/>
+        </svg>
+        Resume
+      </a>
+
+      <!-- copyright notice on far right of footer -->
+      <span class="footer-copyright">
+        &copy; 2026 Nathaniel Rogers
+      </span>
+
+    </div>
+  </footer>
+
+
+  <script src="js/nav.js"></script>
+  <script>
+    (function(){
+      function onReady(fn){
+        if(document.readyState !== 'loading') fn();
+        else document.addEventListener('DOMContentLoaded', fn);
+      }
+
+      onReady(function(){
+          var fadeEls = document.querySelectorAll('.fade-in, .contribution');
+          if(!fadeEls || fadeEls.length === 0) return;
+
+          var io = new IntersectionObserver(function(entries){
+            entries.forEach(function(entry){
+              if(entry.isIntersecting){
+                entry.target.classList.add('visible');
+                io.unobserve(entry.target);
+              }
+            });
+          }, { threshold: 0.12 });
+
+          fadeEls.forEach(function(node){ io.observe(node); });
+      });
+    })();
+  </script>
+</body>
+</html>

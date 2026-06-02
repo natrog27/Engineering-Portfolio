@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Medical Devices — Nathaniel Rogers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ── Navigation ─────────────────────────────────────────── -->
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="/images/logo_small.png" 
+          alt="Logo"
+          class="square"
+          height="60"
+          width="60"
+        />
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="medical-devices.html" class="active">Medical Devices</a></li>
+        <li><a href="about.html">About Me</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── Teal Hero ───────────────────────────────────────────── -->
+  <section class="devices-hero">
+    <div class="devices-hero-inner">
+      <h1 class="display-heading" style="text-align: center; font-size: clamp(3.5rem, 8vw, 6rem);">Medical Devices</h1>
+    </div>
+  </section>
+
+  <!-- ── Figure + Project List ──────────────────────────────── -->
+  <section class="devices-figure-section fade-in">
+    <div class="devices-figure-inner">
+
+      <!-- Left: anatomical figure (decorative) -->
+      <div class="anatomical-figure">
+        <img
+          src="/images/devices/Silhouette.png" 
+          alt="Photo"
+        />
+
+        <!--
+          Project dots — one per project, absolutely positioned over the silhouette.
+          Coordinates are set via .dot-N classes in style.css (top/left as % of image).
+          data-project matches the href of the corresponding project-list-item,
+          ready for hover/click wiring later.
+        -->
+        <span class="project-dot dot-1" data-project="eeg-wheelchair.html"    aria-hidden="true"></span>
+        <span class="project-dot dot-2" data-project="snapvac.html"            aria-hidden="true"></span>
+        <span class="project-dot dot-3" data-project="halo.html"               aria-hidden="true"></span>
+        <span class="project-dot dot-4" data-project="ecg.html"                aria-hidden="true"></span>
+        <span class="project-dot dot-5" data-project="endose.html"             aria-hidden="true"></span>
+        <span class="project-dot dot-6" data-project="arm-stabilizer.html"     aria-hidden="true"></span>
+        <span class="project-dot dot-7" data-project="active-slide-board.html" aria-hidden="true"></span>
+        <span class="project-dot dot-8" data-project="comfycane.html"          aria-hidden="true"></span>
+      </div>
+
+      <!-- Right: clickable project list -->
+      <div class="project-list">
+
+        <a href="eeg-wheelchair.html" class="project-list-item">
+          <span class="project-date">Sep. 2025 – Present</span>
+          <span class="project-name">EEG Wheelchair</span>
+          <div class="project-summary">Adaptable hardware to bring ML-powered brainwave 
+          control to all power wheelchair users.</div>
+        </a>
+
+        <a href="snapvac.html" class="project-list-item">
+          <span class="project-date">Sep. 2023 – Jun. 2025</span>
+          <span class="project-name">SnapVac</span>
+          <div class="project-summary">Improving endotracheal intubation
+           success rates by reducing manpower 
+           need in time-critical scenarios.</div>
+        </a>
+
+        <a href="halo.html" class="project-list-item">
+          <span class="project-date">May 2025 – Sep. 2025</span>
+          <span class="project-name">HALO</span>
+          <div class="project-summary">Bringing subcutaneous large-volume drug delivery out of the clinic and into a wearable.</div>
+        </a>
+
+        <a href="ecg.html" class="project-list-item">
+          <span class="project-date">Mar. 2026</span>
+          <span class="project-name">Dual Bandpass ECG</span>
+          <div class="project-summary">Collecting and processing electrophysiological signals from scratch.</div>
+        </a>
+
+        <a href="endose.html" class="project-list-item">
+          <span class="project-date">Sep. 2025 – Mar. 2026</span>
+          <span class="project-name">ENdose</span>
+          <div class="project-summary">Improving accuracy and precision in at-home 
+          liquid medicine administration.</div>
+        </a>
+
+        <a href="arm-stabilizer.html" class="project-list-item">
+          <span class="project-date">Jan. 2024 – Mar. 2024</span>
+          <span class="project-name">Attachable Arm Stabilizer</span>
+          <div class="project-summary">Bringing independence to power wheelchair drivers with cerebral palsy.</div>
+        </a>
+
+        <a href="active-slide-board.html" class="project-list-item">
+          <span class="project-date">Sep. 2025 – Present</span>
+          <span class="project-name">Active Slide Board</span>
+          <div class="project-summary">Reducing healthcare worker strain and risk while improving patient mobility.</div>
+        </a>
+
+        <a href="comfycane.html" class="project-list-item">
+          <span class="project-date">Mar. 2024 – Jun. 2024</span>
+          <span class="project-name">ComfyCane</span>
+          <div class="project-summary">Optimizing a patient’s mobility aid for age-related changes.</div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ─────────────────────────────────────────────── -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-photo">
+        <!-- REPLACE: circular headshot photo -->
+        <img
+          src="/images/nathaniel_rogers_headshot_small.jpg" 
+          alt="Photo"
+          class="square"
+          style="width:44px;height:44px;"
+        />    
+      </div>
+
+      <a href="mailto:nrogers@u.northwestern.edu" class="footer-link">
+        <!-- envelope icon -->
+        <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="4" width="20" height="16" rx="2"/>
+          <polyline points="2,4 12,13 22,4"/>
+        </svg>
+        Email
+      </a>
+
+      <a href="https://www.linkedin.com/in/nathaniel-r0gers/" target="_blank" rel="noopener" class="footer-link">
+        <!-- linkedin icon -->
+        <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+          <rect x="2" y="9" width="4" height="12"/>
+          <circle cx="4" cy="4" r="2"/>
+        </svg>
+        LinkedIn
+      </a>
+
+      <a href="supporting_docs/nathaniel_rogers_resume.pdf" target="_blank" rel="noopener" class="footer-link">
+        <!-- document file icon -->
+        <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <polyline points="14 2 14 8 20 8"/>
+          <line x1="16" y1="13" x2="8" y2="13"/>
+          <line x1="16" y1="17" x2="8" y2="17"/>
+        </svg>
+        Resume
+      </a>
+
+      <!-- copyright notice on far right of footer -->
+      <span class="footer-copyright">
+        &copy; 2026 Nathaniel Rogers
+      </span>
+
+    </div>
+  </footer>
+
+
+  <script src="js/nav.js"></script>
+  <script>
+    (function(){
+      function onReady(fn){
+        if(document.readyState !== 'loading') fn();
+        else document.addEventListener('DOMContentLoaded', fn);
+      }
+
+      onReady(function(){
+        var fadeEls = document.querySelectorAll('.fade-in, .contribution');
+        if(!fadeEls || fadeEls.length === 0) return;
+
+        var io = new IntersectionObserver(function(entries){
+          entries.forEach(function(entry){
+            if(entry.isIntersecting){
+              entry.target.classList.add('visible');
+              io.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12 });
+
+        fadeEls.forEach(function(node){ io.observe(node); });
+      });
+    })();
+  </script>
+</body>
+</html>

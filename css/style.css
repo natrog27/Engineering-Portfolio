@@ -1,0 +1,1296 @@
+/* ============================================================
+   NATHANIEL ROGERS — PORTFOLIO STYLESHEET
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
+
+/* ── CSS Variables ─────────────────────────────────────────── */
+:root {
+  --teal:        #4a9e8e;
+  --teal-dark:   #3d8578;
+  --crimson:     #8b1a1a;
+  --crimson-mid: #a52020;
+  --black:       #111111;
+  --grey-dark:   #333333;
+  --grey-mid:    #666666;
+  --grey-light:  #f2f2f2;
+  --white:       #ffffff;
+  --border:      #dddddd;
+
+  --font-title:  'Space Grotesk', Georgia, 'Times New Roman', serif;
+  --font-sans:   Montserrat, 'Source Sans 3', sans-serif;
+
+  --nav-height:  56px;
+  --max-w:       1500px;
+  --page-pad:    clamp(1rem, 4vw, 3rem);
+}
+
+/* ── Reset & Base ───────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--grey-dark);
+  background: var(--white);
+}
+
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-decoration: none; }
+
+/* ── Navigation ─────────────────────────────────────────────── */
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  padding: 0 var(--page-pad);
+}
+
+.nav-inner {
+  width: 100%;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* Nav links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  list-style: none;
+}
+
+.nav-links li {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links li + li::before {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 14px;
+  background: var(--grey-mid);
+  margin: 0 14px;
+}
+
+.nav-links a {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--grey-dark);
+  text-decoration: none;
+  
+}
+
+/* Hover: bold ONLY */
+.nav-links a:hover {
+  color: var(--black);
+  font-weight: 600;
+  transition: color 0.3s, font-weight 0.3s;
+}
+
+/* Active: bold + underline */
+.nav-links a.active {
+  color: var(--black);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ── Back Arrow (project pages) ─────────────────────────────── */
+.back-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-title);
+  font-size: 0.875rem;
+  color: var(--black);
+  padding: var(--page-pad) var(--page-pad) 0;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: block;
+}
+
+a.back-arrow:hover { 
+  color: var(--white) !important; 
+  transition: color 0.3s;
+}
+
+/* ── Hero Banner (teal top section) ─────────────────────────── */
+.hero {
+  background: var(--teal);
+  color: var(--white);
+  padding: 0;
+  overflow: hidden;
+}
+
+.hero-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 420px;
+}
+
+.hero-image-col {
+  background: #e8e8e8;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-image-col .img-placeholder {
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
+  object-fit: cover;
+}
+
+.hero-image-col img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-text-col {
+  background: var(--teal);
+  padding: clamp(2rem, 5vw, 4rem) clamp(1.5rem, 4vw, 3rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Project hero (narrower, with image left) */
+.project-hero .hero-image-col {
+  max-width: 340px;
+}
+
+/* ── Typography ─────────────────────────────────────────────── */
+.display-heading {
+  font-family: var(--font-title);
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-weight: normal;
+  line-height: 1.05;
+  color: var(--black);
+  text-align: center;
+}
+
+.display-heading.light { 
+  color: var(--black); 
+  text-align: left
+}
+
+.display-heading.large { 
+  color: var(--black); 
+  text-align: left;
+  font-size: clamp(3.5rem, 8vw, 6rem);
+}
+
+.section-heading {
+  font-family: var(--font-title);
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: normal;
+  color: var(--black);
+  margin-bottom: 0.5rem;
+}
+
+.project-title {
+  font-family: var(--font-title);
+  font-size: clamp(1.8rem, 10vw, 8rem);
+  font-weight: normal;
+  color: var(--black);
+  line-height: 1.1;
+  text-align: center;
+}
+
+.project-subtitle {
+  font-family: var(--font-title);
+  font-size: clamp(.8rem, 1vw, 1.2rem);
+  color: var(--black);
+  margin-top: 15rem;
+  line-height: 1.5;
+  max-width: 340px;
+  margin-left: auto;
+  text-align: right;
+}
+
+
+h1.disclaimer-text {
+  font-family: var(--font-title);
+  color: var(--crimson);
+  font-style: italic;
+}
+
+/* ── Skill Tags Bar ─────────────────────────────────────────── */
+.skill-bar {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: var(--white);
+  padding: 0.85rem var(--page-pad);
+}
+
+.skill-bar-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+}
+
+.skill-bar-label,
+.skill-tag {
+  font-family: var(--font-title);
+  font-size: 1.2rem;
+  letter-spacing: 0.01em;
+}
+
+.skill-bar-label {
+  color: var(--teal);
+  font-weight: 600;
+}
+
+.skill-tag {
+  color: var(--black);
+  display: inline;
+  padding: 0;
+  margin: 0 0.25rem;
+  position: relative;
+}
+
+.skill-tag--grey {
+  color: var(--grey-mid);
+}
+
+.skill-tag::after {
+  content: ',\00a0';
+}
+
+.skill-tag:last-child::after {
+  content: '';
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ── Asterisk Section Marker ────────────────────────────────── */
+.section-marker {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.asterisk {
+  font-size: 5rem;
+  font-family: var(--font-title);
+  color: var(--teal);
+  line-height: 1;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.section-about {
+  padding: clamp(2rem, 5vw, 3.5rem) var(--page-pad);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+/* ── Content Sections ───────────────────────────────────────── */
+.section {
+  padding: clamp(2rem, 5vw, 3.5rem) var(--page-pad);
+  /* two columns, one narrow for vertical story nav bar, one for content*/
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 0;
+}
+
+.section-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+.section.grey { 
+  background: var(--grey-light);
+}
+
+.section-about.grey { background: var(--grey-light); }
+
+
+/* ── Sticky Vertical Narrative Labels ─────────────────────── */
+
+
+.story-block {
+  display: grid;
+
+  /* narrow sidebar column */
+  grid-template-columns: 42px 1fr;
+
+  gap: 0;
+
+  align-items: start;
+
+  max-width: var(--max-w);
+  margin: 0;
+
+  /* add this */
+  padding-block: 2rem;
+
+  /* full-height dark red tinted column */
+  background:
+    linear-gradient(
+      to right,
+      rgba(139, 26, 26, 0.05) 0,
+      rgba(139, 26, 26, 0.05) 42px,
+      transparent 42px
+    );
+}
+
+.story-label {
+  position: sticky;
+  top: 50vh;
+  transform: rotate(180deg);
+  align-self: start;
+
+  /* vertical sizing */
+  height: fit-content;
+
+  /* typography */
+  font-family: 'Space Grotesk', Georgia, serif;
+  font-size: 2rem;
+  color: var(--teal);
+
+  /* vertical text */
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+
+  line-height: 1;
+
+  /* subtle appearance */
+  opacity: 0.8;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .story-block {
+    grid-template-columns: 1fr;
+  }
+
+  .story-label {
+    display: none;
+  }
+}
+
+/* Two-column content layout */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 4vw, 4rem);
+  align-items: start;
+}
+
+/* Vertically center the right-hand image column in the ECG challenge section */
+#challenge .two-col > div:last-child {
+  align-self: center;
+}
+
+.two-col.reverse { direction: rtl; }
+.two-col.reverse > * { direction: ltr; }
+
+/* Three-column grid */
+.three-col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* Center image + caption inside product three-column items */
+#product .three-col > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ── Image Placeholders ─────────────────────────────────────── */
+.img-placeholder {
+  background: #d8d8d8;
+  border: 1px solid #c0c0c0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: var(--grey-mid);
+  font-size: 0.78rem;
+  font-family: var(--font-sans);
+  text-align: center;
+  padding: 1rem;
+  border-radius: 2px;
+}
+
+.img-placeholder .placeholder-icon {
+  font-size: 1.4rem;
+  opacity: 0.5;
+}
+
+.img-placeholder.tall { min-height: 260px; }
+.img-placeholder.medium { min-height: 180px; }
+.img-placeholder.short { min-height: 120px; }
+.img-placeholder.square { aspect-ratio: 1; }
+.img-placeholder.portrait { aspect-ratio: 3/4; }
+.img-placeholder.wide { aspect-ratio: 16/9; min-height: 200px; }
+
+/* Teal-bordered image box (used in project pages) */
+.teal-framed {
+  border: 2px solid var(--teal);
+  border-radius: 2px;
+  overflow: hidden;
+  display: inline-block;
+  line-height: 0;
+  width: fit-content;
+}
+
+.teal-framed img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* center project images */
+.project-image {
+  display:flex; 
+  flex-direction:column; 
+  align-items:center;
+}
+
+/* ── Caption ─────────────────────────────────────────────────── */
+.caption {
+  font-family: var(--font-title);
+  font-size: 0.8rem;
+  color: var(--grey-mid);
+  text-align: center;
+  margin-top: 0.5rem;
+  padding-bottom: 1rem;
+}
+
+.document-link {
+  color: var(--teal);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* ── Body Text Formatting ────────────────────────────────────── */
+.prose p { margin-bottom: 1rem; }
+.prose p:last-child { margin-bottom: 0; }
+.prose strong { font-weight: 700; }
+.prose em { font-style: italic; }
+
+.prose ol, .prose ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+.prose li { margin-bottom: 0.35rem; }
+
+/* ── Contribution Item ───────────────────────────────────────── */
+.contribution {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1.5rem, 3vw, 3rem);
+  align-items: center;
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.contribution:last-child { border-bottom: none; }
+
+/* Individual contribution fade-in states (animate on scroll) */
+.contribution {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.contribution.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Center the image or media inside the contribution's media column
+   and stack captions beneath images */
+.contribution > div:last-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.contribution > div:last-child img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Ensure captions inside the media column span the full width and sit below images */
+.contribution > div:last-child .caption {
+  width: 100%;
+  text-align: center;
+  margin-top: 0;
+  padding-bottom: 0.5rem;
+}
+
+.contribution.flip { direction: rtl; }
+.contribution.flip > * { direction: ltr; }
+
+.contribution-text h3 {
+  font-family: var(--font-title);
+  font-size: 1.25rem;
+  font-weight: normal;
+  margin-bottom: 0.6rem;
+  color: var(--black);
+}
+
+.contribution-text p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* ── Features Grid ───────────────────────────────────────────── */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.feature-card h4 {
+  font-family: var(--font-title);
+  font-weight: normal;
+  font-size: 1rem;
+  color: var(--black);
+}
+
+/* ── Centered Heading Block ──────────────────────────────────── */
+.heading-block {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.heading-block .section-heading {
+  display: inline-block;
+  border-bottom: 2px solid var(--teal);
+  padding-bottom: 0.25rem;
+}
+
+/* ── Footer / Contact Bar ────────────────────────────────────── */
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 1.25rem var(--page-pad);
+  background: var(--white);
+}
+
+.footer-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.footer-photo {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.footer-photo .img-placeholder {
+  width: 44px;
+  height: 44px;
+  font-size: 0.6rem;
+  min-height: unset;
+}
+
+.footer-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-title);
+  font-size: 0.85rem;
+  color: var(--teal);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.3s;
+}
+
+.footer-link:hover { 
+  color: var(--crimson); 
+}
+
+.footer-icon {
+  width: 18px;
+  height: 18px;
+  color: var(--teal);
+  flex-shrink: 0;
+}
+
+.footer-link:hover .footer-icon {
+  color: var(--crimson);
+  transition: color 0.3s;
+}
+
+.footer-copyright {
+  font-size: 0.75rem;
+  color: var(--grey-mid);
+  margin-top: 0.5rem;
+  /* align to right*/
+  margin-left: auto;
+
+}
+
+/* ── In-Progress Notice ──────────────────────────────────────── */
+.in-progress {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 2rem 0 1rem;
+}
+
+.in-progress .asterisk {
+  font-size: 2rem;
+}
+
+.in-progress p {
+  font-family: var(--font-title);
+  font-size: clamp(1.2rem, 3vw, 1.7rem);
+  color: var(--teal);
+  line-height: 1.4;
+}
+
+/* ── Home Page Specifics ─────────────────────────────────────── */
+.home-hero .hero-text-col {
+  padding: clamp(2.5rem, 5vw, 4rem) clamp(1.5rem, 4vw, 3rem);
+}
+
+.home-hero .display-heading {
+  color: var(--black);
+  margin-bottom: 1.25rem;
+  text-align: left;
+}
+
+.home-intro-body {
+  font-size: 0.875rem;
+  color: var(--black);
+  line-height: 1.7;
+  margin-bottom: 0.75rem;
+}
+
+.home-intro-body strong { font-weight: 700; }
+
+.home-cta-links {
+  margin-top: 1.2rem;
+  font-size: 0.875rem;
+  color: var(--black);
+}
+
+.home-cta-links a {
+  color: var(--black);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.3s;
+}
+
+.home-cta-links a:hover { 
+  color: var(--white); }
+
+/* ── Medical Devices Hub ─────────────────────────────────────── */
+.devices-hero {
+  background: var(--teal);
+  /* large padding like about me page */
+  padding: var(--page-pad);
+  text-align: left;
+}
+
+.devices-hero-inner {
+  margin: 0 ;
+  min-height: 100vh;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.devices-hero .display-heading {
+  color: var(--black);
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+
+}
+
+.chevron-down {
+  text-align: center;
+  padding: 1rem 0 0;
+  font-size: 2rem;
+  color: var(--black);
+  cursor: default;
+}
+
+/* Figure + project list layout */
+.devices-figure-section {
+  padding: clamp(2rem, 4vw, 3rem) var(--page-pad);
+  background: var(--white);
+}
+
+.devices-figure-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0rem;
+  align-items: start;
+}
+
+.anatomical-figure {
+  position: relative;
+}
+
+.anatomical-figure img {
+  width: 50vw;
+}
+
+.anatomical-figure .img-placeholder {
+  min-height: 600px;
+  background: #e8e8e8;
+}
+
+/* ── Project dots ────────────────────────────────────────────
+   Translucent red circles overlaid on the silhouette.
+   Each .dot-N sets top/left as % of the image container.
+   Tweak coordinates here; data-project attr is ready for
+   JS hover/line/link wiring later.
+   ─────────────────────────────────────────────────────────── */
+.project-dot {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(139, 26, 26, 0.35);   /* translucent crimson */
+  border: 1.5px solid rgba(139, 26, 26, 0.6);
+  transform: translate(-50%, -50%);       /* center on coordinate */
+  pointer-events: none;                   /* inert for now */
+  transition: background 0.2s, transform 0.2s;
+}
+
+/* Anatomical dot positions — (top, left) as % of .anatomical-figure */
+/* 1. EEG Wheelchair  — head / brain */
+.dot-1 { top: 5%;  left: 58%; }
+/* 2. SnapVac         — throat / larynx */
+.dot-2 { top: 16%; left: 55%; }
+/* 3. HALO            — upper arm */
+.dot-3 { top: 25%; left: 74%; }
+/* 4. Dual Bandpass ECG — chest / heart */
+.dot-4 { top: 30%; left: 60%; }
+/* 5. ENdose          — abdomen / stomach */
+.dot-5 { top: 38%; left: 53%; }
+/* 6. Attachable Arm Stabilizer — elbow */
+.dot-6 { top: 48%; left: 82%; }
+/* 7. Active Slide Board — hips */
+.dot-7 { top: 55%; left: 68%; }
+/* 8. ComfyCane       — lower leg */
+.dot-8 { top: 70%; left: 67%; }
+
+.project-dot {
+  cursor: pointer;
+  pointer-events: auto; /* was: none */
+}
+
+.project-dot:hover,
+.project-dot.dot-active {
+  background: rgba(74, 158, 142, 0.45);  /* teal, translucent */
+  border-color: var(--teal);
+  transform: translate(-50%, -50%) scale(1.7);
+}
+
+.project-hero-img {
+  position: relative;
+}
+
+.project-dot--large {
+  width: 80px;
+  height: 80px;
+  border-width: 2px;
+  transform: translate(-50%, -50%);
+}
+
+.project-dot--large:hover,
+.project-dot--large.dot-active {
+  background: rgba(74, 158, 142, 0.45);
+  border-color: var(--teal);
+  transform: translate(-50%, -50%);
+}
+
+/* Project list on right side */
+.project-list {
+  padding-top: 1rem;
+}
+
+.project-list-item {
+  /* two columns, one for date and one for name */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  align-items: start;
+  padding: 3rem 1rem 0 0;
+  border-bottom: 1.5px solid var(--crimson);
+  cursor: pointer;
+  transition: background 0.3s;
+  overflow: hidden;
+}
+
+.project-date {
+  font-family: var(--font-title);
+  font-size: 0.8rem;
+  color: var(--black);
+  text-align: left;
+  padding-left: 0.5rem;
+  padding-top: 0.5rem;
+  transition: color 0.3s;
+}
+
+.project-name {
+  font-family: var(--font-title);
+  font-size: 1.3rem;
+  color: var(--black);
+  text-align: right;
+  transition: color 0.3s;
+}
+
+.project-summary {
+  grid-column: 1 / -1;
+  padding: 0.75rem 0 1rem 0.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--grey-dark);
+  line-height: 1.65;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, opacity 0.35s ease, padding 0.35s ease;
+  justify-content: right;
+}
+
+.project-list-item:hover .project-summary {
+  max-height: 1000px;
+  opacity: 1;
+  padding-top: 0.75rem;
+}
+
+.project-date {
+  font-family: var(--font-title);
+  font-size: 0.8rem;
+  color: var(--black);
+  text-align: left;
+  padding-left: 0.5rem;
+  padding-top: 0.5rem;
+  transition: color 0.3s;
+}
+
+.project-list-item:hover .project-name,
+.project-list-item:hover .project-date {
+  color: var(--teal);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+.project-list-item.dot-hovered .project-name,
+.project-list-item.dot-hovered .project-date {
+  color: var(--teal);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+.project-list-item.dot-hovered .project-summary {
+  max-height: 1000px;
+  opacity: 1;
+  padding-top: 0.75rem;
+}
+
+/* ── About Page ──────────────────────────────────────────────── */
+.about-hero .hero-image-col {
+  min-height: 420px;
+}
+
+.about-body-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.personal-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.personal-project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.personal-project-card .project-card-title {
+  font-family: var(--font-title);
+  font-size: 0.9rem;
+  text-align: center;
+  color: var(--black);
+}
+
+.about-link:hover {
+  color: var(--teal);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.3s;
+}
+
+/* ── Project Page Hero ───────────────────────────────────────── */
+.project-hero-grid {
+  display: grid;
+  grid-template-columns: 50vw 1fr;
+  background: var(--teal);
+  min-height: 100vh;
+  align-items: center;
+}
+
+.project-hero-img {
+  aspect-ratio: 1 / 1;
+}
+
+.project-hero-img .img-placeholder {
+  width: 100%;
+  height: 100%;
+  /* remove min-height and aspect-ratio */
+}
+
+.project-hero-text {
+  padding:
+    clamp(2rem, 4vw, 3.5rem)   /* top */
+    clamp(1.5rem, 3vw, 2.5rem) /* right */
+    clamp(.5rem, 1vw, 2rem)     /* bottom (smaller) */
+    clamp(1.5rem, 3vw, 2.5rem) /* left */;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.project-hero-text .project-title {
+  color: var(--black);
+}
+
+/* Red underline accent on project title */
+.title-underline {
+  display: block;
+  width: 70%;
+  height: 2px;
+  background: var(--crimson);
+  margin-top: 0.4rem;
+}
+
+/* ── Stub Page Notice ────────────────────────────────────────── */
+.stub-notice {
+  background: var(--grey-light);
+  border-left: 4px solid var(--teal);
+  padding: 1.5rem 2rem;
+  margin: 2rem 0;
+  font-size: 0.9rem;
+  color: var(--grey-mid);
+}
+
+.stub-notice h3 {
+  font-family: var(--font-title);
+  font-weight: normal;
+  font-size: 1.1rem;
+  color: var(--grey-dark);
+  margin-bottom: 0.4rem;
+}
+
+/* ── Responsive ──────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .hero-split,
+  .project-hero-grid,
+  .two-col,
+  .about-body-grid,
+  .contribution,
+  .contribution.flip {
+    grid-template-columns: 1fr;
+    direction: ltr;
+  }
+
+  .hero-image-col { min-height: 260px; }
+
+  .devices-figure-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .three-col,
+  .features-grid,
+  .personal-projects-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .project-list-item {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
+  }
+
+  .project-name { text-align: left; }
+
+  .project-hero-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .three-col,
+  .features-grid,
+  .personal-projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Research Flowchart ──────────────────────────────────────── */
+.research-flowchart {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 1.5rem;
+}
+
+.flowchart-grid {
+  display: grid;
+  grid-template-columns: 1fr 28px 1fr 28px 1fr 28px 1fr;
+  grid-auto-rows: minmax(80px, auto);
+  gap: 1rem;
+  align-items: center;
+  min-width: 640px;
+}
+
+.flowchart-spacer {
+  min-height: 0;
+}
+
+.flowchart-header {
+  font-family: var(--font-title);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--white);
+  background: var(--teal);
+  padding: 0.6rem 0.9rem;
+  text-align: center;
+  border-radius: 2px 2px 0 0;
+}
+
+.flowchart-cells {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 8px;
+}
+
+.flowchart-cell {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--teal);
+  border-radius: 2px;
+  padding: 0.7rem 0.85rem;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--grey-dark);
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.flowchart-arrow-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: calc(8px + 2.2rem); /* offset past header */
+  gap: 8px;
+}
+
+.flowchart-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80px;
+  flex-shrink: 0;
+}
+
+.flowchart-arrow svg {
+  width: 22px;
+  height: 22px;
+  color: var(--teal);
+}
+
+@media (max-width: 768px) {
+  .research-flowchart {
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* -- New Grok Content -- */
+/* ============================================================
+   NEW VERTICAL STORY RAIL
+   ============================================================ */
+
+.story-container {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: rem;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding-left: var(--page-pad);
+  position: relative;
+}
+
+.vertical-rail {
+  position: sticky;
+  top: 80px;
+  /* make height fill vertical viewport*/
+  height: calc(100vh - 120px);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-self: start;
+  border-right: 1px solid var(--black);
+}
+
+a.rail-link {
+  font-family: var(--font-title);
+  font-size: 0.95rem;
+  line-height: 1.05;
+  color: var(--black);
+  text-decoration: none;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  transition: background 0.2s ease;
+  padding: 4rem 0;
+  position: relative;
+  border-radius: 2px;
+  display: inline-block;
+}
+
+.rail-link:hover {
+  font-weight: 700;
+  transition: font-weight 0.2s ease;
+}
+
+.rail-link.active {
+  color: var(--black);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 1px;
+}
+
+.project-bullets {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  font-family: var(--font-title);
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  padding-left: 2rem;
+}
+
+/* Content wrapper */
+.story-content-wrapper {
+  min-width: 0;
+}
+
+/* Individual sections */
+.story-section {
+  padding-bottom: 6rem;
+  scroll-margin-top: 100px;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.story-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.story-section:last-child {
+  padding-bottom: 4rem;
+}
+
+/* Make existing .section layout behave as single-column inside the story wrapper */
+.story-content-wrapper .section {
+  display: block;
+  grid-template-columns: unset;
+  padding: clamp(2rem, 5vw, 3.5rem) var(--page-pad);
+}
+
+/* Let the section-inner fill the content column (avoid additional centering) */
+.story-content-wrapper .section-inner {
+  max-width: none;
+  margin: 0;
+}
+
+/* Rail link tweaks */
+.rail-link {
+  display: inline-block;
+  text-decoration: none;
+  padding: 2.25rem 0;
+  cursor: pointer;
+  color: var(--teal);
+}
+
+.rail-link:focus { outline: none; }
+
+/* Mobile */
+@media (max-width: 768px) {
+  .story-container {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .vertical-rail {
+    display: none;
+  }
+
+  .story-section {
+    padding-bottom: 4rem;
+  }
+}
