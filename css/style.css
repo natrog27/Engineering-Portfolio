@@ -795,8 +795,8 @@ h1.disclaimer-text {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: rgba(139, 26, 26, 0.35);   /* translucent crimson */
-  border: 1.5px solid rgba(139, 26, 26, 0.6);
+  background: rgba(74, 158, 142, 0.45);  /* teal, translucent */
+  border: 1.5px solid var(--teal);
   transform: translate(-50%, -50%);       /* center on coordinate */
   pointer-events: none;                   /* inert for now */
   transition: background 0.2s, transform 0.2s;
@@ -827,8 +827,8 @@ h1.disclaimer-text {
 
 .project-dot:hover,
 .project-dot.dot-active {
-  background: rgba(74, 158, 142, 0.45);  /* teal, translucent */
-  border-color: var(--teal);
+  background: rgba(139, 26, 26, 0.35);   /* translucent crimson */
+  border-color: var(--crimson);
   transform: translate(-50%, -50%) scale(1.7);
 }
 
@@ -853,8 +853,8 @@ h1.disclaimer-text {
 
 .project-dot--large:hover,
 .project-dot--large.dot-active {
-  background: rgba(74, 158, 142, 0.45);
-  border-color: var(--teal);
+  background: rgba(139, 26, 26, 0.35);   /* translucent crimson */
+  border-color: var(--crimson);
   transform: translate(-50%, -50%);
 }
 
