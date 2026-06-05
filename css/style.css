@@ -702,7 +702,7 @@ h1.disclaimer-text {
 }
 
 .home-intro-body {
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: var(--black);
   line-height: 1.7;
   margin-bottom: 0.75rem;
@@ -712,7 +712,7 @@ h1.disclaimer-text {
 
 .home-cta-links {
   margin-top: 1.2rem;
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: var(--black);
 }
 
@@ -736,7 +736,7 @@ h1.disclaimer-text {
 
 .devices-hero-inner {
   margin: 0 ;
-  min-height: 100vh;
+  min-height: 20vh;
   align-items: center;
   display: flex;
   justify-content: center;
